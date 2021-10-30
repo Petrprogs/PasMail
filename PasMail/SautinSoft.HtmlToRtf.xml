@@ -1,0 +1,2365 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>SautinSoft.HtmlToRtf</name>
+  </assembly>
+  <members>
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ChannelDefinitionMapper.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ChannelDefinitionMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ChannelDefinitionMapper.getFixedPoint(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ColorSpaceMapper.getFixedPoint(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ColorSpaceMapper.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ColorSpaceMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.EnumeratedColorSpaceMapper.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.EnumeratedColorSpaceMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.EsRgbColorSpaceMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.PalettizedColorSpaceMapper.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.PalettizedColorSpaceMapper.ToString" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.PalettizedColorSpaceMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.PalettizedColorSpaceMapper.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.PalettizedColorSpaceMapper.getCompImgHeight(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.Resampler.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.Resampler.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.SYccColorSpaceMapper.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.SYccColorSpaceMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Icc.ICCProfiler.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Icc.ICCProfiler.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.Icc.Tags.ICCTag" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.codestream.ProgressionType" -->
+    <!-- Badly formed XML comment ignored for member "F:CSJ2K.j2k.codestream.reader.PktDecoder.ttIncl" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.codestream.writer.BitOutputBuffer" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.codestream.writer.BitOutputBuffer.Length" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.codestream.writer.BitOutputBuffer.Buffer" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.codestream.writer.BitOutputBuffer.writeBit(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.codestream.writer.BitOutputBuffer.writeBits(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.codestream.writer.CodestreamWriter.writePacketHead(System.Byte[],System.Int32,System.Boolean,System.Boolean,System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.codestream.writer.FileCodestreamWriter" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.codestream.writer.FileCodestreamWriter.writePacketHead(System.Byte[],System.Int32,System.Boolean,System.Boolean,System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.codestream.writer.FileCodestreamWriter.writePacketBody(System.Byte[],System.Int32,System.Boolean,System.Boolean,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "F:CSJ2K.j2k.codestream.writer.PktEncoder.prevtIdxs" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.entropy.CBlkSizeSpec" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.CBlkSizeSpec.getCBlkWidth(System.Byte,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.entropy.decoder.EntropyDecoder" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.EntropyDecoder.getSynSubbandTree(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.MQDecoder.fastDecodeSymbols(System.Int32[],System.Int32,System.UInt32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.MQDecoder.decodeSymbols(System.Int32[],System.Int32[],System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.MQDecoder.decodeSymbol(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.MQDecoder.init" -->
+    <!-- Badly formed XML comment ignored for member "F:CSJ2K.j2k.entropy.decoder.StdEntropyDecoder.state" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.StdEntropyDecoder.getCodeBlock(System.Int32,System.Int32,System.Int32,CSJ2K.j2k.wavelet.synthesis.SubbandSyn,CSJ2K.j2k.image.DataBlk)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.StdEntropyDecoder.magRefPass(CSJ2K.j2k.image.DataBlk,CSJ2K.j2k.entropy.decoder.MQDecoder,System.Int32,System.Int32[],System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.StdEntropyDecoder.rawMagRefPass(CSJ2K.j2k.image.DataBlk,CSJ2K.j2k.entropy.decoder.ByteToBitInput,System.Int32,System.Int32[],System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.StdEntropyDecoder.cleanuppass(CSJ2K.j2k.image.DataBlk,CSJ2K.j2k.entropy.decoder.MQDecoder,System.Int32,System.Int32[],System.Int32[],System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.encoder.EBCOTRateAllocator.getAllCodeBlocks" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.encoder.EntropyCoder.isReversible(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.entropy.encoder.MQCoder" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.encoder.MQCoder.fastCodeSymbols(System.Int32,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.entropy.PrecinctSizeSpec" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.fileformat.reader.FileFormatReader.readJP2HeaderBox(System.Int64,System.Int32,System.Int64)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.fileformat.reader.FileFormatReader.readContiguousCodeStreamBox(System.Int64,System.Int32,System.Int64)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.BlkImgDataSrc" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.BlkImgDataSrc.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.BlkImgDataSrc.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgData.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataAdapter.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataConverter.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataConverter.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataJoiner.#ctor(CSJ2K.j2k.image.BlkImgDataSrc[],System.Int32[])" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataJoiner.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataJoiner.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataJoiner.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.input.ImgReaderPGM" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGM.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGM.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGM.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.input.ImgReaderPGX" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGX.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGX.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGX.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.input.ImgReaderPPM" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPPM.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPPM.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPPM.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.invcomptransf.InvCompTransf.getFixedPoint(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.invcomptransf.InvCompTransf.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.invcomptransf.InvCompTransf.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.invcomptransf.InvCompTransf.setTile(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.invcomptransf.InvCompTransf.nextTile" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.output.ImgWriterPGM" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.output.ImgWriterPGM.#ctor(System.String,CSJ2K.j2k.image.BlkImgDataSrc,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.output.ImgWriterPGX" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.output.ImgWriterPGX.#ctor(System.String,CSJ2K.j2k.image.BlkImgDataSrc,System.Int32,System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.output.ImgWriterPPM" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.output.ImgWriterPPM.write" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.output.ImgWriterPPM.writeHeaderInfo" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.Tiler.#ctor(CSJ2K.j2k.image.BlkImgDataSrc,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.io.BinaryDataOutput" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.io.BinaryDataOutput.writeByte(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.io.BinaryDataOutput.writeShort(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.io.BufferedRandomAccessFile" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.io.BufferedRandomAccessFile.writeByte(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.io.EndianType_Fields" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.JJ2KExceptionHandler" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.JJ2KExceptionHandler.handleException(System.Exception)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.ModuleSpec.parseIdx(System.String,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.NotImplementedError" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.NotImplementedError.#ctor" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.quantization.dequantizer.CBlkQuantDataSrcDec" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.quantization.dequantizer.Dequantizer.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.quantization.dequantizer.Dequantizer.getSynSubbandTree(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.quantization.dequantizer.Dequantizer.setTile(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.quantization.dequantizer.Dequantizer.nextTile" -->
+    <!-- Badly formed XML comment ignored for member "F:CSJ2K.j2k.quantization.dequantizer.StdDequantizerParams.exp" -->
+    <!-- Badly formed XML comment ignored for member "F:CSJ2K.j2k.quantization.dequantizer.StdDequantizerParams.nStep" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.quantization.QuantizationType_Fields" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.quantization.quantizer.Quantizer.getAnSubbandTree(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.quantization.QuantTypeSpec" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.roi.encoder.ArbROIMaskGenerator" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.roi.encoder.ArbROIMaskGenerator.getROIMask(CSJ2K.j2k.image.DataBlkInt,CSJ2K.j2k.wavelet.Subband,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.roi.encoder.ArbROIMaskGenerator.makeMask(CSJ2K.j2k.wavelet.Subband,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.roi.encoder.RectROIMaskGenerator" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.roi.encoder.RectROIMaskGenerator.getROIMask(CSJ2K.j2k.image.DataBlkInt,CSJ2K.j2k.wavelet.Subband,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.roi.encoder.ROIMaskGenerator" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.roi.encoder.ROIScaler" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.roi.ROIDeScaler.getSynSubbandTree(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.StringSpec.#ctor(System.Int32,System.Int32,System.Byte,System.String,System.String[],CSJ2K.j2k.util.ParameterList)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.util.FacilityManager" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.util.ISRandomAccessIO" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.util.MsgLogger_Fields" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.MsgPrinter.nextLineEnd(System.String,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.MsgPrinter.nextWord(System.String,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ParameterList.parseArgs(System.String[])" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.util.ThreadPool" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.ThreadPoolThread.Run" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.#ctor(System.Int32,System.Int32,System.String)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.runTarget(IThreadRunnable,System.Object)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.runTarget(IThreadRunnable,System.Object,System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.clearTargetErrors" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.putInIdleList(CSJ2K.j2k.util.ThreadPool.ThreadPoolThread)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.getIdle(System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloat" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.SynLowNegSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.SynLowPosSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.SynHighNegSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.SynHighPosSupport" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.analyze_lpf(System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32,System.Single[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.analyze_hpf(System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32,System.Single[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.getLPSynthesisFilter" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.getHPSynthesisFilter" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.isSameAsFullWT(System.Int32,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.Equals(System.Object)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.analysis.AnWTFilterInt" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterIntLift5x3.analyze_hpf(System.Int32[],System.Int32,System.Int32,System.Int32,System.Int32[],System.Int32,System.Int32,System.Int32[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterSpec.getHFilters(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterSpec.getVFilters(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.CBlkWTDataSrcDec.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.InvWTFull.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.MultiResImgDataAdapter.getCompImgHeight(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.synthesis.SynWTFilter" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloat" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.SynLowNegSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.SynLowPosSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.SynHighNegSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.SynHighPosSupport" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.synthetize_lpf(System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.synthetize_hpf(System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.isSameAsFullWT(System.Int32,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.synthesis.SynWTFilterInt" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.WTDecompSpec" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTDecompSpec.#ctor(System.Int32,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTDecompSpec.getDecSpecType(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTDecompSpec.getDecompType(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTDecompSpec.getLevels(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.WTFilterSpec" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTFilterSpec.#ctor(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTFilterSpec.getKerSpecType(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:jj2000.j2k.util.NativeServices" -->
+    <!-- Badly formed XML comment ignored for member "P:jj2000.j2k.util.NativeServices.ThreadConcurrency" -->
+    <!-- Badly formed XML comment ignored for member "M:SupportClass.Tokenizer.MoveNext" -->
+    <member name="T:SautinSoft.HtmlToRtf">
+      <summary>
+            The «HTML to RTF .Net» is 100% C# managed assembly which provides to any .Net Framework and Core application these functions:<br /><ul><li>Convert HTML (URL, ASPX, XHTML) to Word (DOCX, RTF, Unicode Text) with CSS, images, tables, Unicode and full text formatting.</li><li>Merge RTF documents and replace text inside them.</li></ul></summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\HTML to RTF and Vice Versa\sample.cs" title="Convert HTML to RTF and Vice Versa using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\HTML to RTF and Vice Versa\sample.vb" title="Convert HTML to RTF and Vice Versa using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.SautinImage">
+      <summary>
+            Class which allows to operate with images in memory during HTML to RTF conversion and vice versa.
+            </summary>
+      <remarks>See sample of using this class: <a href="http://blog.sautinsoft.com/create-html-email-with-embedded-images-from-rtf-in-net">How to create HTML email with embedded images from RTF in .Net</a><br /><br /></remarks>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.SautinImage.Cid">
+      <summary>
+            Image Cid
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.SautinImage.Img">
+      <summary>
+            Object of the <see cref="T:System.Drawing.Image" /> standard class.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.SautinImage.Dispose">
+      <summary>
+            Release Img from memory.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.eBorderVisibility">
+      <summary>
+            Set a custom table borders visibility.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eBorderVisibility.Visible">
+      <summary>
+            Set all borders for all tables in document as visible: solid 1px black.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eBorderVisibility.Hidden">
+      <summary>
+            Set all borders for all tables in document as invisible.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eBorderVisibility.SameAsOriginalHtml">
+      <summary>
+            Default value: Set all table borders the same as in input HTML document.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.eFontFace">
+      <summary>
+            Allows to set a custom font family for the whole document.
+            </summary>
+      <remarks>By default the component uses "Times New Roman", 10.<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set single font family and size\sample.cs" title="How to set a single font family and size using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set single font family and size\sample.vb" title="How to set a single font family and size using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Arial">
+      <summary>
+            Arial.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Times_New_Roman">
+      <summary>
+            Times New Roman.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Verdana">
+      <summary>
+            Verdana.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Helvetica">
+      <summary>
+            Helvetica.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Courier">
+      <summary>
+            Courier.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Courier_New">
+      <summary>
+            Courier New.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Times">
+      <summary>
+             Times.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Georgia">
+      <summary>
+            Georgia.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_MS_Sans_Serif">
+      <summary>
+            MS Sans Serif.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Futura">
+      <summary>
+            Futura.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Arial_Narrow">
+      <summary>
+            Arial Narrow.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Garamond">
+      <summary>
+            Garamond.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Impact">
+      <summary>
+            Impact.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Lucida_Console">
+      <summary>
+            Lucida Console.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Tahoma">
+      <summary>
+            Tahoma.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Inform">
+      <summary>
+            Inform.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Symbol">
+      <summary>
+            Symbol.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_WingDings">
+      <summary>
+            WingDings.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Traditional_Arabic">
+      <summary>
+            Traditional Arabic.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Calibri">
+      <summary>
+            Calibri.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eFontFace.f_Arial_Unicode_MS">
+      <summary>
+            Arial Unicode MS.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.eEncoding">
+      <summary>
+            Allows to specify the encoding of input HTML document.
+            </summary>
+      <remarks>By default: AutoDetect.
+            </remarks>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.AutoDetect">
+      <summary>
+            Auto-detect encoding
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.iso8859_1">
+      <summary>
+            iso-8859-1
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.iso8859_5">
+      <summary>
+            iso-8859-5
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.koi8_r">
+      <summary>
+            koi8-r
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.windows1251">
+      <summary>
+            windows-1251
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.utf8">
+      <summary>
+            utf-8
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.windows1254">
+      <summary>
+            windows-1254
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.windows1256">
+      <summary>
+            windows-1256
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.windows1250">
+      <summary>
+            windows-1250
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.windows1252">
+      <summary>
+            windows-1252
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.windows1253">
+      <summary>
+            windows-1253
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.windows1255">
+      <summary>
+            windows-1255
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.windows1257">
+      <summary>
+            windows-1257
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.windows1258">
+      <summary>
+            windows-1258
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.utf16">
+      <summary>
+            utf-16
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.ibm866">
+      <summary>
+            ibm866
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.shift_jis">
+      <summary>
+            shift_jis
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.gb2312">
+      <summary>
+            gb2312
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eEncoding.unknown">
+      <summary>
+            The same as AutoDetect.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.eInputFormat">
+      <summary>
+            Allows to specify format of input document.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eInputFormat.Text">
+      <summary>
+            Textual document.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eInputFormat.Html">
+      <summary>
+            Html (default), Xhtml, Aspx, etc.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.eOutputFormat">
+      <summary>
+            Allows to specify the format for an output document (Docx, Rtf, Text).
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eOutputFormat.Rtf">
+      <summary>
+            Produce the resulting document in RTF (Rich Text Format Specification 1.8) format.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eOutputFormat.Docx">
+      <summary>
+            Produce the resulting document in DOCX (Office Open XML, ECMA-376) format.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eOutputFormat.TextUTF8WithoutBOM">
+      <summary>
+            Produce the resulting document in text format with UTF-8 encoding (without BOM).
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eOutputFormat.TextUTF8WithBOM">
+      <summary>
+            Produce the resulting document in text format with UTF-8 encoding with BOM.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eOutputFormat.TextUTF16">
+      <summary>
+            Produce the resulting document in text format with UTF-16 encoding using the little endian byte order.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eOutputFormat.TextASCII">
+      <summary>
+            Produce the resulting document in ASCII text format.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.eRtfLanguage">
+      <summary>
+            Allows to specify the default language for output document. Usually the language is used to spell checking.
+            </summary>
+      <remarks>This language will be used by application which opens RTF (for example MS Word) for spell checking.<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set a language for a spelling tools\sample.cs" title="How to set a language for a spelling tools using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set a language for a spelling tools\sample.vb" title="How to set a language for a spelling tools using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Albanian">
+      <summary>
+            Albanian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_English">
+      <summary>
+            English (default)
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Belgian">
+      <summary>
+            Belgian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Bulgarian">
+      <summary>
+            Bulgarian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Hungarian">
+      <summary>
+            Hungarian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Danish">
+      <summary>
+            Danish
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Spanish">
+      <summary>
+            Spanish
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Latvian">
+      <summary>
+            Latvian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Lithuanian">
+      <summary>
+            Lithuanian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_German">
+      <summary>
+            German
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Netherlands">
+      <summary>
+            Netherlands
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Norwegian">
+      <summary>
+            Norwegian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Portuguese">
+      <summary>
+            Portuguese
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Romanian">
+      <summary>
+            Romanian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Russian">
+      <summary>
+            Russian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Ukrainian">
+      <summary>
+            krainian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Finnish">
+      <summary>
+            Finnish
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_French">
+      <summary>
+            French
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Czech">
+      <summary>
+            Czech
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Swedish">
+      <summary>
+            Swedish
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Arabic">
+      <summary>
+            Arabic
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Turkish">
+      <summary>
+            Turkish
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Japanese">
+      <summary>
+            Japanese
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_SimplifiedChinese">
+      <summary>
+            Simplified Chinese
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_TraditionalChinese">
+      <summary>
+            Traditional Chinese
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Korean">
+      <summary>
+            Korean
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Thai">
+      <summary>
+            Thai
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Italian">
+      <summary>
+            Italian
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_EnglishUK">
+      <summary>
+            English UK
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Greek">
+      <summary>
+            Greek
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfLanguage.l_Polish">
+      <summary>
+            Polish
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.eRtfCompatibility">
+      <summary>
+            Allows to choose how to render the RTF document to keep compatibility with old RTF readers. Default value: ModernRtfReaders.
+            </summary>
+      <remarks>
+            There are a lot of various RTF readers: MS Word, WordPad, RichTextBox for WinForms, RichTextBox for WPF.<br />
+            Let us say, MS Word supports RTF with images stored in different formats: Jpeg, PNG, EMF.But RichTextBox for WinForms only support images stored as Bitmap.<br /><br />
+            Playing with this property, you may adjust the component for your RTF reader.<br />We recommend to use default (ModernRtfReaders) settings.
+            </remarks>
+      <example>
+        <code lang="xaml" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to WPF RichTextBox\MainWindow.xaml" title="Convert HTML to WPF RichTextBox in C# (XAML)">
+        </code>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to WPF RichTextBox\MainWindow.xaml.cs" title="Convert HTML to WPF RichTextBox in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to WPF RichTextBox\MainWindow.xaml.vb" title="Convert HTML to WPF RichTextBox in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfCompatibility.ModernRtfReaders">
+      <summary>
+            MS Word, WordPad from Windows 8 and higher and other readers.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eRtfCompatibility.OldRtfReaders">
+      <summary>
+            WinForms, WPF - RichTextBox, WordPad from Windows 7 and lower.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.ePageNumberingAppearence">
+      <summary>
+            Allows to specify the page numbering appearance: start from the first page, start from the second page or disabled.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page numbers\sample.cs" title="How to add page numbering using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page numbers\sample.vb" title="How to add page numbering using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.ePageNumberingAppearence.PageNumDisable">
+      <summary>
+            Disable page numbers.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.ePageNumberingAppearence.PageNumFirst">
+      <summary>
+            Page numbers start from 1st page.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.ePageNumberingAppearence.PageNumSecond">
+      <summary>
+            Page numbers start from 2nd page.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.CMergeOptions">
+      <summary>
+            Allows to specify some options to merge RTF documents.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Merge and Replace\Merge multiple RTF files\sample.cs" title="Merge multiple RTF files using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Merge and Replace\Merge multiple RTF files\sample.vb" title="Merge multiple RTF files using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CMergeOptions.PageBreakBetweenDocuments">
+      <summary>
+            Get and set the value indicating to insert a page break between merged RTF documents. Default value: false.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Merge and Replace\Merge multiple RTF files\sample.cs" title="Merge multiple RTF files using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Merge and Replace\Merge multiple RTF files\sample.vb" title="Merge multiple RTF files using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.CTextStyle">
+      <summary>
+            Allows to set a custom text formatting properties during the HTML conversion.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set single font family and size\sample.cs" title="How to set a single font family and size using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set single font family and size\sample.vb" title="How to set a single font family and size using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CTextStyle.DefaultFontFamily">
+      <summary>
+            Get and set the default font family. Default value: Times New Roman.
+            </summary>
+      <remarks>
+            This font family will be used as default for all HTML elements where font family value is missing.
+            </remarks>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CTextStyle.SingleFontFamily">
+      <summary>
+            Get and set a single font family for whole text in the input HTML document. Default value: null.
+            </summary>
+      <remarks>Default value: null. In this case, will be used font families from the source HTML document.<br /><br />Please be careful with this property, it resets all font families to a single.</remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set single font family and size\sample.cs" title="How to set a single font family and size using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set single font family and size\sample.vb" title="How to set a single font family and size using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CTextStyle.DefaultFontSize">
+      <summary>
+            Get and set the default font size. Default value: 12f.
+            </summary>
+      <remarks>
+            This font size will be used as default for all HTML elements where font size value is missing.
+            </remarks>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CTextStyle.SingleFontSize">
+      <summary>
+            Get and set a single font size for all text in the converted HTML document. Default value: null.
+            </summary>
+      <remarks>Default value: null. In this case, will be used font sizes from the source HTML document.<br /><br />Please be careful with this property, it resets all font sizes to a single.</remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set single font family and size\sample.cs" title="How to set a single font family and size using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set single font family and size\sample.vb" title="How to set a single font family and size using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CTextStyle.DefaultTextColor">
+      <summary>
+            Get and set the default font color. Default value: Black.
+            </summary>
+      <remarks>
+            This font color will be used as default for all HTML elements where font color value is missing.
+            </remarks>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CTextStyle.SingleFontColor">
+      <summary>
+            Get and set default a single font color for all text in the converted HTML document. Default value: null.
+            </summary>
+      <remarks>Default value: null. In this case, will be used font colors from the source HTML document.<br /><br />Please be careful with this property, it resets all font colors to a single.</remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set single font family and size\sample.cs" title="How to set a single font family and size using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set single font family and size\sample.vb" title="How to set a single font family and size using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CTextStyle.#ctor">
+      <summary>
+            Allows to set a custom text formatting properties during the HTML conversion.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set single font family and size\sample.cs" title="Set single font family, size and color using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set single font family and size\sample.vb" title="Set single font family, size and color using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.CPageStyle">
+      <summary>
+            Allows to specify page properties for output document: page size, orientation, page margins and page numbering.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.CPageStyle.CPageSize">
+      <summary>
+            Allows to set a page size for an output document.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.Width">
+      <summary>
+            Get and set the Page Width in Inches or millimeters.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.Height">
+      <summary>
+            Get and set the Page Height in Inches or millimeters.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.Auto">
+      <summary>
+            Set the default page size: Letter.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.A0">
+      <summary>
+            841 x 1189 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.A1">
+      <summary>
+            594 x 841 mm.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.A2">
+      <summary>
+            420 x 594 mm.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.A3">
+      <summary>
+            297 x 420 mm.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.A4">
+      <summary>
+            210 x 297 mm.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.A5">
+      <summary>
+            148 x 210 mm.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.A6">
+      <summary>
+            105 x 148 mm.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.A7">
+      <summary>
+            1000 x 1414 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.B0">
+      <summary>
+            707 x 1000 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.B1">
+      <summary>
+            500 x 707 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.B2">
+      <summary>
+            353 x 500 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.B3">
+      <summary>
+            250 x 353 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.B4">
+      <summary>
+            176 x 250 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.B5">
+      <summary>
+            125 x 176 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.B6">
+      <summary>
+            128 x 182 mm.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.B7">
+      <summary>
+            917 x 1297 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.C0">
+      <summary>
+            648 x 917 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.C1">
+      <summary>
+            458 x 648 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.C2">
+      <summary>
+            324 x 458 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.C3">
+      <summary>
+            229 x 324 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.C4">
+      <summary>
+            162 x 229 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.C5">
+      <summary>
+            114 x 162 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.C6">
+      <summary>
+            81 x 114 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.C7">
+      <summary>
+            216 x 279 mm. 
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.EnvelopeC5">
+      <summary>
+            162 x 229 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.EnvelopeC6">
+      <summary>
+            114 x 162 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.EnvelopeDL">
+      <summary>
+            110 x 220 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.LedgerTabloid">
+      <summary>
+            279 x 432 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.Paper11x17">
+      <summary>
+            279 x 432 mm. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.Letter">
+      <summary>
+            216 x 279 mm.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to DOCX\ASP.Net - Convert ASPX page to DOCX\Default.aspx.cs" title="ASP.Net - Convert ASPX page to DOCX using C#">
+        </code>
+        <code lang="html" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to DOCX\ASP.Net - Convert ASPX page to DOCX\Default.aspx" title="Default.aspx">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to DOCX\ASP.Net - Convert ASPX page to DOCX\Default.aspx.vb" title="ASP.Net - Convert ASPX page to DOCX using VB.Net">
+        </code>
+        <code lang="html" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to DOCX\ASP.Net - Convert ASPX page to DOCX\Default.aspx" title="Default.aspx">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.Legal">
+      <summary>
+            216 x 356 mm.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageSize.Executive">
+      <summary>
+            190 x 254 mm.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.CPageStyle.CUnit">
+      <summary>
+            Allows to specify values in millimeters, inches and twips (twentieth of a point, 1 point is equal as 20 twips).
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CUnit.Inch(System.Single)">
+      <summary>
+            Set a value in inches.
+            </summary>
+      <param name="val">Value in inches</param>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CUnit.Mm(System.Single)">
+      <summary>
+            Set a value in millimeters.
+            </summary>
+      <param name="val">Value in millimeters</param>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CUnit.Twips(System.Int32)">
+      <summary>
+            Specify the value in twips. Twip (twentieth of a point, 1 point is equal as 20 twips).
+            </summary>
+      <param name="val">Value in twips</param>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CUnit.Auto">
+      <summary>
+            Set a value by default.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.PageNumbers">
+      <summary>
+             Allows to set a custom page numbering in the result RTF or DOCX document. 
+             </summary>
+      <remarks>Using this property you may set custom page numbers as you wish. Use this property together with the <see cref="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.Appearance" />, <see cref="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.AlignH" /> and <see cref="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.AlignV" />.<br /><br />            
+             These are special keywords to set the custom page numbering:<br /><br /><b>{page}</b> - Current page number.<br /><b>{numpages}</b> - Total pages.<br />
+             By default: Page numbers are located at the right-bottom of the page and represent digit(s), for example "1".<br /><br />
+             These are samples of using this property:<br /><br />
+             h.PageStyle.PageNumbers.Format = "Page {page} of {numpages}";<br /><br />
+             h.PageStyle.PageNumbers.Format = "This is page number {page}";<br /><br />
+             h.PageStyle.PageNumbers.Format = "Seite {page} von {numpages}";<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page numbers\sample.cs" title="Add page numbering using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page numbers\sample.vb" title="Add page numbering using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.PageHeader">
+      <summary>
+            Setup the page header in formats: Html, Rtf or Text.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page header and footer\sample.cs" title="Add page header and footer using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page header and footer\sample.vb" title="Add page header and footer using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.PageFooter">
+      <summary>
+            Setup the page footer in any format: Html, Rtf or Text.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page header and footer\sample.cs" title="Add page header and footer using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page header and footer\sample.vb" title="Add page header and footer using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers">
+      <summary>
+             Allows to set a custom page numbering in the output RTF or DOCX document. 
+             </summary>
+      <remarks>Using this property you may set custom page numbers as you wish. Use this property together with the <see cref="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.Appearance" />, <see cref="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.AlignH" /> and <see cref="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.AlignV" />.<br /><br />            
+             These are special keywords to set the custom page numbering:<br /><br /><b>{page}</b> - Current page number.<br /><b>{numpages}</b> - Total pages.<br />
+             By default: Page numbers are located at the left-bottom of the page and represent digit(s), for example "1".<br /><br />
+             These are samples of using this property:<br /><br />
+             h.PageStyle.PageNumbers.Format = "Page {page} of {numpages}";<br /><br />
+             h.PageStyle.PageNumbers.Format = "This is page number {page}";<br /><br />
+             h.PageStyle.PageNumbers.Format = "Seite {page} von {numpages}";<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page numbers\sample.cs" title="How to add page numbering using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page numbers\sample.vb" title="How to add page numbering using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.Appearance">
+      <summary>
+            Get and set the appearance of page numbering: start from the first page, start from the second page or disabled.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page numbers\sample.cs" title="How to add page numbering using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page numbers\sample.vb" title="How to add page numbering using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.Font">
+      <summary>
+            Allows to set up custom font family and size for page numbers string
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.Format">
+      <summary>
+             Specify the formatted string with page numbering, for example: "Page {page} of {numpages}". Default value: "Page {page} of {numpages}". 
+             </summary>
+      <remarks>Using this property you may set custom page numbers as you wish. Use this property together with <see cref="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.Appearance" />, <see cref="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.AlignH" /> and <see cref="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.AlignV" />.<br /><br />            
+             These are some special keywords to customize page numbering:<br /><br /><b>{page}</b> - current page number<br /><b>{numpages}</b> - total pages<br />
+             By default: Page numbers located at the bottom-left of page and represent digit(s), for example "1".<br /><br />
+             These are samples of using this property:<br /><br />
+             h.PageStyle.PageNumbers.Format = "Page {page} of {numpages}";<br /><br />
+             h.PageStyle.PageNumbers.Format = "This is page number {page}";<br /><br />
+             h.PageStyle.PageNumbers.Format = "Seite {page} von {numpages}";<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page numbers\sample.cs" title="How to add page numbering using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page numbers\sample.vb" title="How to add page numbering using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.AlignV">
+      <summary>
+            Get and set the vertical alignment for the page numbering.
+            </summary>
+      <remarks>
+            Default value: <see cref="F:SautinSoft.HtmlToRtf.eAlign.Bottom">Bottom</see>.
+            </remarks>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.AlignH">
+      <summary>
+            Get and set the horizontal alignment for the page numbering.
+            </summary>
+      <remarks>
+            Default value: <see cref="F:SautinSoft.HtmlToRtf.eAlign.Center">Center</see>.
+            </remarks>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.X">
+      <summary>
+            Get and set the position of page numbering by horizontal. Starts from the top left page corner.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.CPageNumbers.Y">
+      <summary>
+            Get and set the position of page numbering by vertical. Starts from the top left page corner.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.CPageStyle.CPageOrientation">
+      <summary>
+            Allows to set the page orientation for the resulted.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageOrientation.#ctor">
+      <summary>
+            Creates a new instance of <see cref="T:SautinSoft.HtmlToRtf.CPageStyle.CPageOrientation" /> class.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageOrientation.Portrait">
+      <summary>
+            Set the Portrait page orientation.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageOrientation.Landscape">
+      <summary>
+            Set the Landscape page orientation.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.CPageOrientation.Auto">
+      <summary>
+            Set the default page orientation: Portrait.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.PageSize">
+      <summary>
+            Set page size
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.PageOrientation">
+      <summary>
+            Set page orientation
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.PageMarginLeft">
+      <summary>
+            Set left page margin
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\ASP.Net - Convert ASPX page to RTF\Default.aspx.cs" title="ASP.Net - Convert ASPX page to RTF using C#">
+        </code>
+        <code lang="html" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\ASP.Net - Convert ASPX page to RTF\Default.aspx" title="Default.aspx">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\ASP.Net - Convert ASPX page to RTF\Default.aspx.vb" title="ASP.Net - Convert ASPX page to RTF using VB.Net">
+        </code>
+        <code lang="html" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\ASP.Net - Convert ASPX page to RTF\Default.aspx" title="Default.aspx">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.PageMarginRight">
+      <summary>
+            Set right page margin
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.PageMarginTop">
+      <summary>
+            Set top page margin
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CPageStyle.PageMarginBottom">
+      <summary>
+            Set bottom page margin
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CPageStyle.#ctor">
+      <summary>
+            Creates a new instance of <see cref="T:SautinSoft.HtmlToRtf.CPageStyle" /> class. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.CFont">
+      <summary>
+            Allows to set font properties: face and size.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CFont.Size">
+      <summary>
+            Allows to set font size
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CFont.Face">
+      <summary>
+            Gets and sets the page numbering Font Family. Default value: <see cref="F:SautinSoft.HtmlToRtf.eFontFace.f_Arial" />.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.CHeaderFooter">
+      <summary>
+            Class which allows to specify header and footer in HTML, RTF or Text formats.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page header and footer\sample.cs" title="How to add page header and footer using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page header and footer\sample.vb" title="How to add page header and footer using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CHeaderFooter.#ctor">
+      <summary>
+            Creates a new instance of the <see cref="T:SautinSoft.HtmlToRtf.CHeaderFooter">SautinSoft.HtmlToRtf.CHeaderFooter</see> class
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page header and footer\sample.cs" title="Add page header and footer using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page header and footer\sample.vb" title="Add page header and footer using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CHeaderFooter.Clear">
+      <summary>
+            Clears the header/footer settings.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CHeaderFooter.MarginTop">
+      <summary>
+            Get and set a top margin for a header/footer.
+            </summary>
+      <remarks>This margin will be summed with the page margin.<br /></remarks>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.CHeaderFooter.MarginBottom">
+      <summary>
+            Get and set a bottom margin for a header/footer.
+            </summary>
+      <remarks>This margin will be summed with the page margin.<br /></remarks>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CHeaderFooter.FromHtmlURL(System.String)">
+      <summary>
+            Set a header/footer from HTML document using URL.
+            </summary>
+      <param name="url">URL as string</param>
+      <remarks>We don't recommend to use complex web-sites as header or footer. The best is using simple HTML table with text and images as header/footer.<br /><br /></remarks>
+      <example>
+        <code>
+            SautinSoft.HtmlToRtf h = new SautinSoft.HtmlToRtf();
+            h.PageStyle.PageHeader.FromHtmlURL(@"http://mysite.com/header.htm");
+            </code>
+        <code lang="vbnet">
+            Dim h As New SautinSoft.HtmlToRtf()
+            h.PageStyle.PageHeader.FromHtmlURL("http://mysite.com/header.htm")
+            </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CHeaderFooter.FromHtmlFile(System.String)">
+      <summary>
+            Set a header/footer from any HTML file.
+            </summary>
+      <param name="path">Path to local HTML file</param>
+      <remarks>We don't recommend to use complex HTML documents as header or footer. The best is using simple HTML table with text and images as header/footer.<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\ASP.Net - Convert HTML to RTF\Default.aspx.cs" title="ASP.Net - Convert HTML to RTF using C#">
+        </code>
+        <code lang="html" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\ASP.Net - Convert HTML to RTF\Default.aspx" title="Default.aspx">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\ASP.Net - Convert HTML to RTF\Default.aspx.vb" title="ASP.Net - Convert HTML to RTF using VB.Net">
+        </code>
+        <code lang="html" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\ASP.Net - Convert HTML to RTF\Default.aspx" title="Default.aspx">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CHeaderFooter.FromRtfFile(System.String)">
+      <summary>
+            Set a header/footer from local RTF file.
+            </summary>
+      <param name="path">Path to local RTF file</param>
+      <remarks>This method is very usefull when you want to insert header/footer from existing RTF document<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page header and footer\sample.cs" title="Add page header and footer using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page header and footer\sample.vb" title="Add page header and footer using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CHeaderFooter.Html(System.String)">
+      <summary>
+            Set a header/footer from any HTML string.
+            </summary>
+      <param name="html">String in HTML format</param>
+      <remarks>We don't recommend to use complex HTML documents as header or footer. The best is using simple HTML table with text and images as header/footer.<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to DOCX\ASP.Net - Convert HTML to DOCX\Default.aspx.cs" title="ASP.Net - Convert HTML to DOCX using C#">
+        </code>
+        <code lang="html" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to DOCX\ASP.Net - Convert HTML to DOCX\Default.aspx" title="Default.aspx">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to DOCX\ASP.Net - Convert HTML to DOCX\Default.aspx.vb" title="ASP.Net - Convert HTML to DOCX using VB.Net">
+        </code>
+        <code lang="html" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to DOCX\ASP.Net - Convert HTML to DOCX\Default.aspx" title="Default.aspx">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CHeaderFooter.Text(System.String)">
+      <summary>
+            Set simple text string in header/footer
+            </summary>
+      <param name="text">Any string with text</param>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.CHeaderFooter.Rtf(System.String)">
+      <summary>
+            Set a header/footer in RTF format.
+            </summary>
+      <param name="rtf">String in RTF format which you want to place in header/footer</param>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Add page header and footer\sample.cs" title="Add page header and footer using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Add page header and footer\sample.vb" title="Add page header and footer using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.ExceptionList">
+      <summary>
+            Allows to get list with all arisen exceptions during the one conversion cycle.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.TableFastProcessing">
+      <summary>
+            Get and set the value indicating how launch the table auto-fit algorithm: Fast with middle accuracy (true) or Slow with the maximal accuracy (false). Default value: false.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveTables">
+      <summary>
+            Preserve Tables or transfer to text.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveImages">
+      <summary>
+            Preserve images or skip them.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveHyperlinks">
+      <summary>
+            Preserve Hyperlinks or skip them.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveFontFace">
+      <summary>
+            Preserve font face as in HTML or set a single.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveFontSize">
+      <summary>
+            Preserve font size as in HTML or set a single.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveFontColor">
+      <summary>
+            Preserve font color as in HTML or set Black for whole text.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveBackgroundColor">
+      <summary>
+            Preserve background color as in HTML or skip.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveAlignment">
+      <summary>
+            Preserve alignment as in HTML or set Left to all.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.TableFitWidthByPage">
+      <summary>
+            Gets or sets a value indicating to automatically decrease a table width if it greater than page width. Default value: true.
+            </summary>
+      <remarks>        
+            If you want to preserve a table width even if it exceeds the page width, set this property to false.<br />
+            This property affects only to the tables which have a width greater than the page width. 
+            </remarks>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveNestedTables">
+      <summary>
+            Preserve nested tables as in HTML.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.BorderVisibility">
+      <summary>
+            Set visibility for table's borders: visible, hidden or as in HTML document. 
+            </summary>
+      <remarks>Affects to all tables on HTML page. See <see cref="T:SautinSoft.HtmlToRtf.eBorderVisibility" /><br /><br /></remarks>
+      <example>
+        <code>
+            SautinSoft.HtmlToRtf h = new SautinSoft.HtmlToRtf();
+            h.BorderVisibility = HtmlToRtf.eBorderVisibility.Hidden;
+            </code>
+        <code lang="vbnet">
+            Dim h As New SautinSoft.HtmlToRtf()
+            h.BorderVisibility = HtmlToRtf.eBorderVisibility.Hidden
+            </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.TextStyle">
+      <summary>
+            Set text properties: font family, size and color.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set single font family and size\sample.cs" title="How to set a single font family and size using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set single font family and size\sample.vb" title="How to set a single font family and size using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.MergeOptions">
+      <summary>
+            Gets and sets options to merge RTF documents.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Merge and Replace\Merge multiple RTF files\sample.cs" title="Merge multiple RTF files using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Merge and Replace\Merge multiple RTF files\sample.vb" title="Merge multiple RTF files using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PageStyle">
+      <summary>
+            Set page properties: page size, orientation and page margins.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set page size and margins\sample.cs" title="How to set page size and margins using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set page size and margins\sample.vb" title="How to set page size and margins using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PageAlignment">
+      <summary>
+            Page Alignment.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.RtfLanguage">
+      <summary>
+            Allows to set a default language for spelling tools.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Properties and Settings\Set a language for a spelling tools\sample.cs" title="How to set a language for a spelling tools using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Properties and Settings\Set a language for a spelling tools\sample.vb" title="How to set a language for a spelling tools using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.Encoding">
+      <summary>
+            Encoding of input HTML
+            </summary>
+      <remarks>Allows to set encoding of input HTML document. By default this property is set to <see cref="F:SautinSoft.HtmlToRtf.eEncoding.AutoDetect" />.
+            This means that the component will try to detect encoding by itself from the tag &lt;meta ... charset=..."&gt;.<br /><br /></remarks>
+      <example>
+        <code>
+            SautinSoft.HtmlToRtf h = new SautinSoft.HtmlToRtf();
+            h.Encoding = HtmlToRtf.eEncoding.utf8;
+            </code>
+        <code lang="vbnet">
+            Dim h As New SautinSoft.HtmlToRtf()
+            h.Encoding = HtmlToRtf.eEncoding.utf8
+            </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.InputFormat">
+      <summary>
+            Set input format: Text or Html.
+            </summary>
+      <remarks>By default it's set to <see cref="F:SautinSoft.HtmlToRtf.eInputFormat.Html" />.<br /><br /></remarks>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.OutputFormat">
+      <summary>
+            Set the output format: DOCX, RTF, Text ansi or Unicode Text.
+            </summary>
+      <remarks>By default it's set to <see cref="F:SautinSoft.HtmlToRtf.eOutputFormat.Rtf" />.<br /><br /></remarks>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreservePageBreaks">
+      <summary>
+            Preserve PageBreaks or skip them.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.RtfCompatibility">
+      <summary>
+            Set and get how to render the RTF document to keep compatibility with old RTF readers. Default value: ModernRtfReaders.
+            </summary>
+      <remarks>
+            There are a lot of various RTF readers: MS Word, WordPad, RichTextBox for WinForms, RichTextBox for WPF.<br />
+            Let us say, MS Word supports RTF with images stored in different formats: Jpeg, PNG, EMF.But RichTextBox for WinForms only support images stored as Bitmap.<br /><br />
+            Playing with this property, you may adjust the component for your RTF reader.<br />We recommend to use default (ModernRtfReaders) settings.
+            </remarks>
+      <example>
+        <code lang="xaml" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to WPF RichTextBox\MainWindow.xaml" title="Convert HTML to WPF RichTextBox in C# (XAML)">
+        </code>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to WPF RichTextBox\MainWindow.xaml.cs" title="Convert HTML to WPF RichTextBox in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to WPF RichTextBox\MainWindow.xaml.vb" title="Convert HTML to WPF RichTextBox in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.BaseURL">
+      <summary>
+            It's target path of HTML document base location.
+            </summary>
+      <remarks>This is very important property when you are converting HTML document in memory. Specify a BaseURL that is it will convert all relative URLs on that page to absolute URLs.
+            <br /><br />For example, lets convert HTML string to RTF file.<br /><br />
+            If we've specified:<br /><br />
+            h.BaseURL = @"d:\my webs";<br /><br />
+            When the component meets 'src="images/asterisk.jpg"' it will try to open it from: "d:\my webs\images\asterisk.jpg"<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to RTF Stream\sample.cs" title="Convert HTML to RTF Stream using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to RTF Stream\sample.vb" title="Convert HTML to RTF Stream using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.Cookies">
+      <summary>
+            Allows to set a credentials to work with password protected HTML documents, e.g. set userName and password
+            </summary>
+      <example>
+        <code>
+            SautinSoft.HtmlToRtf h = new SautinSoft.HtmlToRtf();
+            string url = "http://www.google.com";
+            CookieContainer myCookies = new CookieContainer();
+            Cookie userName = new Cookie("username", "bob");
+            myCookies.Add(new Uri(url), userName);
+            Cookie password = new Cookie("password", "bobpassword");
+            myCookies.Add(new Uri(url), password);
+            h.Cookies = myCookies;
+            </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveHR">
+      <summary>
+            Preserve horizontal rule or skip it.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveHttpImages">
+      <summary>
+             Produce only RTF fragment without document header, font table, color and style tables.
+             </summary>
+      <remarks>
+            This feature would be helpful when you are inserting small RTF fragments to a database or current RTF           documents. Produced RTF fragments don't contain any font or color formatting.<br /><br />
+             Default value: false.
+             </remarks>
+      <summary>
+            Download Remote Images or skip them.
+            </summary>
+      <remarks>By default the PreserveHttpImages is set to True, it means that the component will try to download images which linked to the Internet, for example:
+            <br /><br />&lt;img src="http://mysite.com/pict.jpg" &gt;<br /><br />To switch off the downloading images from Internet set this property to False.<br />Also if you have any issues with images, the property <see cref="!:SautinSoft.HtmlToRtf.CreateTraceFile" /> will be helpful.<br /><br /></remarks>
+      <example>
+        <code>
+            SautinSoft.HtmlToRtf h = new SautinSoft.HtmlToRtf();
+            h.PreserveHttpImages = false;
+            </code>
+        <code lang="vbnet">
+            Dim h As New SautinSoft.HtmlToRtf()
+            h.PreserveHttpImages = False
+            </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.HttpImagesTimeout">
+      <summary>
+            Gets or sets the time-out value in milliseconds to wait before the request times out. The default value is 100,000 milliseconds (100 seconds).
+            </summary>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.PreserveHttpCss">
+      <summary>
+            Download Remote CSS or skip it.
+            </summary>
+      <remarks>By default the PreserveHttpCss is set to True, it means that the component will try to download *.css files which linked to the Internet, for example:
+            <br /><br />&lt;hyperlink href="http://mysite.com/css/main.css" rel="stylesheet" type="text/css"&gt;<br /><br />To switch off the downloading CSS from Internet set this property to False.<br />Also if you have any issues with remote CSS, the property <see cref="!:SautinSoft.HtmlToRtf.CreateTraceFile" /> will be helpful.<br /><br /></remarks>
+      <example>
+        <code>
+            SautinSoft.HtmlToRtf h = new SautinSoft.HtmlToRtf();
+            h.PreserveHttpCss = false;
+            </code>
+        <code lang="vbnet">
+            Dim h As New SautinSoft.HtmlToRtf()
+            h.PreserveHttpCss = False
+            </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.HtmlToRtf.Serial">
+      <summary>
+            Set your activation key.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Product Activation\sample.cs" title="Product Activation using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Product Activation\sample.vb" title="Product Activation using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.SetSerial(System.String)">
+      <summary>
+             Set your activation key.
+            </summary>
+      <param name="serial">Activation key</param>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:SautinSoft.HtmlToRtf">SautinSoft.HtmlToRtf</see> class.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to DOCX\Convert HTML url to DOCX file\sample.cs" title="Convert HTML to DOCX file using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to DOCX\Convert HTML url to DOCX file\sample.vb" title="Convert HTML to DOCX file using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:SautinSoft.HtmlToRtf">SautinSoft.HtmlToRtf</see>.
+            </summary>
+      <param name="serial">Allows to pass your serial number using constructor.</param>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.eAlign">
+      <summary>
+            Allows to specify default alignment. Can be used in properties like a <see cref="P:SautinSoft.HtmlToRtf.PageAlignment" /> or <see cref="!:SautinSoft.HtmlToRtf.PageNumbersAlignH" /></summary>
+      <example>
+        <code>
+            SautinSoft.HtmlToRtf h = new SautinSoft.HtmlToRtf();
+            h.PageAlignment = SautinSoft.HtmlToRtf.eAlign.Right;
+            h.PageNumbersAlignV = SautinSoft.HtmlToRtf.eAlign.Top;
+            </code>
+        <code lang="vbnet">
+            Dim h As New SautinSoft.HtmlToRtf()
+            h.PageAlignment = SautinSoft.HtmlToRtf.eAlign.Right
+            h.PageNumbersAlignV = SautinSoft.HtmlToRtf.eAlign.Top
+            </code>
+      </example>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eAlign.Left">
+      <summary>
+            Left
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eAlign.Right">
+      <summary>
+            Right
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eAlign.Center">
+      <summary>
+            Center
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eAlign.Justify">
+      <summary>
+            Justify
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eAlign.Top">
+      <summary>
+            Top
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eAlign.Bottom">
+      <summary>
+            Bottom
+            </summary>
+    </member>
+    <member name="F:SautinSoft.HtmlToRtf.eAlign.Undefined">
+      <summary>
+            Undefined (only for internal needs of the component)
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.OpenHtml(System.IO.Stream)">
+      <summary>
+            Opens an HTML document from <see cref="T:System.IO.Stream" /> object. Use this method in pair with: ToRtf(), ToDocx() and ToText().
+            </summary>
+      <param name="html">HTML document as <see cref="T:System.IO.Stream" /> object.</param>
+      <returns>True - in case of successful reading of HTML.<br />
+            False - in case of error of reading HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to RTF Stream\sample.cs" title="Convert HTML to RTF Stream using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to RTF Stream\sample.vb" title="Convert HTML to RTF Stream using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.OpenHtml(System.Byte[])">
+      <summary>
+            Opens an HTML document from array of bytes. Use this method in pair with: ToRtf(), ToDocx() and ToText().
+            </summary>
+      <param name="html">HTML document as an array of bytes</param>
+      <returns>True - in case of successful reading of HTML.<br />
+            False - in case of error of reading HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to DOCX\Convert HTML to DOCX bytes\sample.cs" title="Convert HTML to DOCX bytes using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to DOCX\Convert HTML to DOCX bytes\sample.vb" title="Convert HTML to DOCX bytes using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.OpenHtml(System.String)">
+      <summary>
+            Opens an HTML document from <see cref="T:System.String" /> object or from a file or URL. Use this method in pair with: ToRtf(), ToDocx() and ToText().
+            </summary>
+      <param name="htmlStringOrPath">HTML document as a <see cref="T:System.String" /> object or a path to HTML file or URL.</param>
+      <returns>True - in case of successful reading of HTML.<br />
+            False - in case of error of reading HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <remarks>
+        <b>Note:</b> The converter will automatically detect, that it's a path to HTML, URL or a String object containg the HTML document.</remarks>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML url to RTF file\sample.cs" title="Convert HTML to RTF file using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML url to RTF file\sample.vb" title="Convert HTML to RTF file using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ToDocx">
+      <summary>
+            Converts the HTML document to Docx format. Works only in pair with OpenHtml() methods.
+            </summary>
+      <returns>The array of bytes with Docx document - in case of converting successful.<br />
+            null - in case of error of converting HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to DOCX\Convert HTML to DOCX bytes\sample.cs" title="Convert HTML to DOCX bytes using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to DOCX\Convert HTML to DOCX bytes\sample.vb" title="Convert HTML to DOCX bytes using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ToDocx(System.IO.Stream)">
+      <summary>
+            Converts the HTML document to Docx format. Works only in pair with OpenHtml() methods.
+            </summary>
+      <param name="stream">An opened <see cref="T:System.IO.Stream" /> with Docx.</param>
+      <returns>True - in case of successful converting of HTML.<br />
+            False - in case of error of converting HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to DOCX\Convert HTML to DOCX Stream\sample.cs" title="Convert HTML to DOCX Stream using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to DOCX\Convert HTML to DOCX Stream\sample.vb" title="Convert HTML to DOCX Stream using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ToDocx(System.String)">
+      <summary>
+            Converts the HTML document to Docx format. Works only in pair with OpenHtml() methods.
+            </summary>
+      <param name="filePath">A path for Docx document. The existing document will be overwritten.</param>
+      <returns>True - in case of successful converting of HTML.<br />
+            False - in case of error of converting HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to DOCX\Convert HTML to DOCX file\sample.cs" title="Convert HTML to DOCX file using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to DOCX\Convert HTML to DOCX file\sample.vb" title="Convert HTML to DOCX file using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ToRtf(System.IO.Stream)">
+      <summary>
+            Converts the HTML document to Rtf format. Works only in pair with OpenHtml() methods.
+            </summary>
+      <param name="stream">An opened <see cref="T:System.IO.Stream" /> with Rtf. </param>
+      <returns>True - in case of successful converting of HTML.<br />
+            False - in case of error of converting HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to RTF Stream\sample.cs" title="Convert HTML to RTF Stream using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to RTF Stream\sample.vb" title="Convert HTML to RTF Stream using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ToRtf">
+      <summary>
+            Converts the HTML document to Rtf format. Works only in pair with OpenHtml() methods.
+            </summary>
+      <returns>A string object with Rtf document - in case of converting successful.<br />
+            null - in case of error of converting HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to RTF string\sample.cs" title="Convert HTML to RTF string using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to RTF string\sample.vb" title="Convert HTML to RTF string using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ToRtf(System.String)">
+      <summary>
+            Converts the HTML document to Rtf format. Works only in pair with OpenHtml() methods.
+            </summary>
+      <param name="filePath">A path for Rtf document. The existing document will be overwritten.</param>
+      <returns>True - in case of successful converting of HTML.<br />
+            False - in case of error of converting HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to RTF file\sample.cs" title="Convert HTML to RTF file using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to RTF file\sample.vb" title="Convert HTML to RTF file using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ToText(System.IO.Stream)">
+      <summary>
+            Converts the HTML document to Text format. Works only in pair with OpenHtml() methods.
+            </summary>
+      <param name="stream">An opened <see cref="T:System.IO.Stream" /> with Docx.</param>
+      <returns>True - in case of successful converting of HTML.<br />
+            False - in case of error of converting HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to Text\Convert HTML to Text Stream\sample.cs" title="Convert HTML to Text Stream using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to Text\Convert HTML to Text Stream\sample.vb" title="Convert HTML to Text Stream using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ToText">
+      <summary>
+            Converts the HTML document to Text format. Works only in pair with OpenHtml() methods.
+            </summary>
+      <returns>A string object with Text document - in case of converting successful.<br />
+            null - in case of error of converting HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to Text\Convert HTML to Text string\sample.cs" title="Convert HTML to Text string using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to Text\Convert HTML to Text string\sample.vb" title="Convert HTML to Text string using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ToText(System.String)">
+      <summary>
+            Converts the HTML document to Text format. Works only in pair with OpenHtml() methods.
+            </summary>
+      <param name="filePath">A path for Text document. The existing document will be overwritten.</param>
+      <returns>True - in case of successful converting of HTML.<br />
+            False - in case of error of converting HTML. Please send this HTML document to support@sautinsoft.com.
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to Text\Convert HTML to Text file\sample.cs" title="Convert HTML to Text file using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to Text\Convert HTML to Text file\sample.vb" title="Convert HTML to Text file using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ConvertString(System.Byte[])">
+      <summary>
+            Please use new methods: <see cref="M:SautinSoft.HtmlToRtf.OpenHtml(System.Byte[])">OpenHtml()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToDocx">ToDocx()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToRtf()</see> and <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToText()</see> instead. Converts HTML document to RTF or Text format, depending of the property <see cref="P:SautinSoft.HtmlToRtf.OutputFormat" />.
+            </summary>
+      <param name="html">HTML document as array of bytes.</param>
+      <returns>
+            RTF or Text document as <see cref="T:System.String" />, depending of the property <see cref="P:SautinSoft.HtmlToRtf.OutputFormat" />.<br />
+            Empty string - in case of conversion failed.
+            </returns>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ConvertString(System.IO.MemoryStream)">
+      <summary>
+            Please use new methods: <see cref="M:SautinSoft.HtmlToRtf.OpenHtml(System.Byte[])">OpenHtml()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToDocx">ToDocx()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToRtf()</see> and <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToText()</see> instead. Converts HTML document to RTF or Text format, depending of the property <see cref="P:SautinSoft.HtmlToRtf.OutputFormat" />.
+            </summary>
+      <param name="html">HTML document as <see cref="T:System.IO.MemoryStream" /> object.</param>
+      <returns>
+            RTF or Text document as <see cref="T:System.String" />, depending of the property <see cref="P:SautinSoft.HtmlToRtf.OutputFormat" />.<br />
+            Empty string - in case of conversion failed.
+            </returns>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ConvertString(System.String)">
+      <summary>
+            Please use new methods: <see cref="M:SautinSoft.HtmlToRtf.OpenHtml(System.Byte[])">OpenHtml()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToDocx">ToDocx()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToRtf()</see> and <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToText()</see> instead. Converts HTML, XHTML, ASPX string to RTF or Text string.
+            </summary>
+      <param name="htmlString">Any string in HTML format, even piece of HTML code</param>
+      <returns>
+            String with RTF or Text document, depends of <see cref="P:SautinSoft.HtmlToRtf.OutputFormat" /><br />
+            null - in case of converting failed        
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to RTF string\sample.cs" title="Convert HTML to RTF string using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to RTF string\sample.vb" title="Convert HTML to RTF string using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ConvertString(System.String,System.Collections.Generic.List{SautinSoft.HtmlToRtf.SautinImage})">
+      <summary>
+            Please use new methods: <see cref="M:SautinSoft.HtmlToRtf.OpenHtml(System.Byte[])">OpenHtml()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToDocx">ToDocx()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToRtf()</see> and <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToText()</see> instead. Converts HTML, XHTML, ASPX string to RTF or Text string. This method can be used together with the <a href="http://www.sautinsoft.com/convert-rtf-to-html/rtf-to-html-component-asp.net.php" target="_blank">RTF to HTML .Net</a> to convert RTF -&gt; HTML -&gt; RTF with images in memory.
+            </summary>
+      <param name="htmlString">Any string in HTML format, even piece of HTML code</param>
+      <param name="ImageList">List which contains images as <see cref="T:SautinSoft.HtmlToRtf.SautinImage" /> objects</param>
+      <returns>
+            String with RTF or Text document, depends of <see cref="P:SautinSoft.HtmlToRtf.OutputFormat" /><br />
+            null - in case of converting failed        
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to RTF string\sample.cs" title="Convert HTML to RTF string using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to RTF string\sample.vb" title="Convert HTML to RTF string using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ConvertFile(System.String,System.String)">
+      <summary>
+            Please use new methods: <see cref="M:SautinSoft.HtmlToRtf.OpenHtml(System.Byte[])">OpenHtml()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToDocx">ToDocx()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToRtf()</see> and <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToText()</see> instead. Converts HTML, XHTML, ASPX file/URL to RTF or Text file. Output file will be overwritten.
+            </summary>
+      <param name="htmlFile">Path to local HTML file or URL.</param>
+      <param name="outputFile">Path to save a resulting RTF or Text file.</param>
+      <returns>
+            0 - converting successfully<br />
+            1 - can't open input file or URL, check the input path<br />
+            2 - can't create output file, check the output path<br />
+            3 - converting failed
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to RTF file\sample.cs" title="Convert HTML to RTF file using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to RTF file\sample.vb" title="Convert HTML to RTF file using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ConvertFileToString(System.String)">
+      <summary>
+            Please use new methods: <see cref="M:SautinSoft.HtmlToRtf.OpenHtml(System.Byte[])">OpenHtml()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToDocx">ToDocx()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToRtf()</see> and <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToText()</see> instead. Converts HTML, XHTML, ASPX file/URL to RTF or Text string
+            </summary>
+      <param name="htmlFile">Path to local HTML file or URL</param>
+      <returns>
+            String with RTF or Text document, depends of <see cref="P:SautinSoft.HtmlToRtf.OutputFormat" /><br />
+            null - in case of converting failed        
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to RTF file\sample.cs" title="Convert HTML to RTF file using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to RTF file\sample.vb" title="Convert HTML to RTF file using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.ConvertStringToFile(System.String,System.String)">
+      <summary>
+            Please use new methods: <see cref="M:SautinSoft.HtmlToRtf.OpenHtml(System.Byte[])">OpenHtml()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToDocx">ToDocx()</see>, <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToRtf()</see> and <see cref="M:SautinSoft.HtmlToRtf.ToRtf">ToText()</see> instead. Converts HTML, XHTML, ASPX string to RTF or Text file. Output file will be overwritten.
+            </summary>
+      <param name="htmlString">Any string in HTML format, even piece of HTML code</param>
+      <param name="outputFile">Local path to save output RTF or Text file</param>
+      <returns>
+            0 - converting successfully<br />        
+            2 - can't create output file, check the output path<br />
+            3 - converting failed
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\HTML to RTF\Convert HTML to RTF string\sample.cs" title="Convert HTML to RTF string using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\HTML to RTF\Convert HTML to RTF string\sample.vb" title="Convert HTML to RTF string using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="T:SautinSoft.HtmlToRtf.BeforeImageDownloadEventHandler">
+      <summary>
+            Delegate to call method before downloading http images.
+            </summary>
+      <param name="aRequest">HttpWebRequest</param>
+      <remarks>
+            Allows to adjust the webrequest object.
+            </remarks>
+    </member>
+    <member name="E:SautinSoft.HtmlToRtf.BeforeImageDownload">
+      <summary>
+            Event which appears before downloading http images
+            </summary>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.MergeRtfFile(System.String,System.String,System.String)">
+      <summary>
+            Merge two RTF files and create new sinlge RTF document. Output file will be overwritten.
+            </summary>
+      <remarks>A merged RTF document will contain 1st RTF document and next 2nd RTF document by order.<br /><br /></remarks>
+      <param name="rtfFilePath1">Path to 1st RTF document</param>
+      <param name="rtfFilePath2">Path to 2nd RTF document</param>
+      <param name="singleMergedRtf">Local path to save output RTF</param>
+      <returns>
+            0 - merged successfully<br />
+            1 - can't open 1st RTF document<br />        
+            2 - can't open 2nd RTF document<br />        
+            3 - merging failed<br />
+            4 - can't create output file, check the output path<br /></returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Merge and Replace\Merge multiple RTF files\sample.cs" title="Merge multiple RTF files using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Merge and Replace\Merge multiple RTF files\sample.vb" title="Merge multiple RTF files using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.MergeAndReplaceRtfFileFromFile(System.String,System.String,System.String,System.String)">
+      <summary>
+            Replaces all matches of string "whatReplaceInRtf" in RTF file "rtfSourcePath" by the content of file "wherewithReplaceRtfPath".
+            </summary>
+      <param name="sourcePath">Path to source RTF file</param>
+      <param name="textToReplace">Textual string which will be replaced by the new string "wherewithReplaceInRtf"</param>
+      <param name="wherewithReplaceRtfPath">Path to RTF file which will be inserted into source RTF</param>
+      <param name="resultPath">Path to new merged RTF file. A fill will be overwritten</param>
+      <remarks>Creates a new RTF file "resultPath"<br /><br /></remarks>
+      <returns>
+            0 - merged successfully<br />
+            1 - can't open RTF source file<br />        
+            2 - can't open 'wherewithReplaceRtfPath' file<br />        
+            3 - merging failed<br />
+            4 - can't create output file, check the output path<br /></returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Merge and Replace\Replace value in RTF document by another RTF\sample.cs" title="Replace value in RTF document by another RTF using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Merge and Replace\Replace value in RTF document by another RTF\sample.vb" title="Replace value in RTF document by another RTF using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.MergeAndReplaceRtfFileFromString(System.String,System.String,System.String,System.String)">
+      <summary>
+            Replaces all matches of the textual string "textToReplace" in RTF file "rtfSourcePath" by the RTF string "wherewithReplaceRtf".
+            </summary>
+      <remarks>Creates a new RTF file. The file will be overwritten.<br /><br /></remarks>
+      <param name="sourcePath">A path to a RTF source file.</param>
+      <param name="textToReplace">Textual string which will be replaced by the new string "wherewithReplaceInRtf"</param>
+      <param name="wherewithReplaceRtf">String which will be inserted instead of "textToReplace"</param>
+      <param name="resultPath">A path to a resulted RTF document. The file will be overwritten.</param>
+      <returns>
+            0 - Replaced successfully.<br />
+            1 - Can't open RTF source file.<br />
+            3 - merging failed.<br />
+            4 - can't create output file, check the output path.<br /></returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Merge and Replace\Replace value in RTF document by another RTF\sample.cs" title="Replace value in RTF document by another RTF using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Merge and Replace\Replace value in RTF document by another RTF\sample.vb" title="Replace value in RTF document by another RTF using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.MergeAndReplaceRtfString(System.String,System.String,System.String)">
+      <summary>
+            Replaces all matches of the string "textToReplace" by the string "wherewithReplaceInRtf" and returns a new RTF document.
+            </summary>
+      <param name="rtfSource">Source RTF document where to search matches of "whatReplaceInRtf"</param>
+      <param name="textToReplace">Textual string which will be replaced by the new string "wherewithReplaceInRtf"</param>
+      <param name="wherewithReplaceInRtf">String in RTF format which will be used to replace all matches of string "textToReplace"</param>
+      <returns>A new RTF document based on rtfSource<br />
+            null - in case of operation failed
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Merge and Replace\Replace value in RTF document by another RTF\sample.cs" title="Replace value in RTF document by another RTF using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Merge and Replace\Replace value in RTF document by another RTF\sample.vb" title="Replace value in RTF document by another RTF using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.HtmlToRtf.MergeRtfString(System.String,System.String)">
+      <summary>
+            Merge two RTF strings and create new sinlge RTF document
+            </summary>
+      <param name="rtf1">1st RTF document as string</param>
+      <param name="rtf2">2nd RTF document as string</param>
+      <remarks>A merged RTF document will contain 1st RTF document and next 2nd RTF document by order.<br /><br /></remarks>
+      <returns>A merged RTF document or empty string in case of merging failed</returns>
+      <example>
+        <code lang="cs" source="..\Packages\HTML to RTF .Net\Code samples\CSharp\Merge and Replace\Merge two RTF documents in memory\sample.cs" title="Merge two RTF documents in memory using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\HTML to RTF .Net\Code samples\VB.Net\Merge and Replace\Merge two RTF documents in memory\sample.vb" title="Merge two RTF documents in memory using VB.Net">
+        </code>
+      </example>
+    </member>
+    <!-- Badly formed XML comment ignored for member "T:SautinSoft.Document.Html.CharsetDetector" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Html.RandomAccessFileOrArray.ReadShortLE" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Html.RandomAccessFileOrArray.ReadUnsignedShortLE" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Html.RandomAccessFileOrArray.ReadCharLE" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Html.RandomAccessFileOrArray.ReadIntLE" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Html.RandomAccessFileOrArray.ReadUnsignedInt" -->
+    <!-- Badly formed XML comment ignored for member "T:SautinSoft.Document.Pdf.Reader.CFFFont.Font" -->
+    <!-- Badly formed XML comment ignored for member "T:SautinSoft.Document.Pdf.Reader.PdfArray" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Pdf.Reader.PdfDictionary.Get(SautinSoft.Document.Pdf.Reader.PdfName)" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Pdf.Reader.PdfEncodings.ConvertToBytes(System.String,System.String)" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Pdf.Reader.PdfEncodings.ConvertToBytes(System.Char,System.String)" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Pdf.Reader.PdfEncodings.ConvertCmap(System.String,System.Byte[])" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Pdf.Reader.PdfEncodings.ConvertCmap(System.String,System.Byte[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Pdf.Reader.PdfName.CompareTo(SautinSoft.Document.Pdf.Reader.PdfName)" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.Pdf.Reader.PdfNull.#ctor" -->
+    <!-- Badly formed XML comment ignored for member "T:SautinSoft.Document.Pdf.Reader.PdfNumber" -->
+    <!-- Badly formed XML comment ignored for member "P:SautinSoft.Document.Pdf.Reader.Vector.Length" -->
+    <!-- Badly formed XML comment ignored for member "P:SautinSoft.Document.Pdf.Reader.Vector.LengthSquared" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.ByteBuffer.SetCacheSize(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.RandomAccessFileOrArray.ReadShortLE" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.RandomAccessFileOrArray.ReadUnsignedShortLE" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.RandomAccessFileOrArray.ReadCharLE" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.RandomAccessFileOrArray.ReadIntLE" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Document.RandomAccessFileOrArray.ReadUnsignedInt" -->
+  </members>
+</doc>
