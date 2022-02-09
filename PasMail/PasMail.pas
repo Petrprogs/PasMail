@@ -1,4 +1,4 @@
-﻿{$resource resources.rc} 
+﻿//{$resource resources.rc} 
 uses Unit1,Unit2, Splash_Screen;
 
 begin
