@@ -16,6 +16,8 @@ type
     procedure tabPage1_Click(sender: Object; e: EventArgs);
     procedure checkBox1_CheckedChanged(sender: Object; e: EventArgs);
     procedure Form2_Load(sender: Object; e: EventArgs);
+    procedure button2_Click(sender: Object; e: EventArgs);
+    procedure label3_Click(sender: Object; e: EventArgs);
   {$region FormDesigner}
   internal
     {$resource Unit2.Form2.resources}
@@ -27,7 +29,8 @@ type
     label1: &Label;
     textBox2: TextBox;
     tabPage2: TabPage;
-    checkBox1: CheckBox;
+    button2: Button;
+    label3: &Label;
     OK: Button;
     {$include Unit2.Form2.inc}
   {$endregion FormDesigner}
@@ -67,16 +70,9 @@ begin
     MessageBox.Show('"Email" field cannot be empty', 'Error!', MessageBoxButtons.OK, MessageBoxIcon.Error)
   else
   if textBox2.Text = '' then
-    MessageBox.Show('"Password" field cannot be empty', 'Error!', MessageBoxButtons.OK, MessageBoxIcon.Error)
-  else
-    if checkBox1.Checked = true then 
-  begin
-    WriteAllText('Credentials.txt', TextBox1.Text + NewLine + textBox2.Text + NewLine + 'true');
-    Form2.Create.Close;
-  end
-  else
-   WriteAllText('Credentials.txt', TextBox1.Text + NewLine + textBox2.Text + NewLine + 'false');
-    Form2.Create.Close;
+    MessageBox.Show('"Password" field cannot be empty', 'Error!', MessageBoxButtons.OK, MessageBoxIcon.Error);
+    WriteAllText('credentials.txt', TextBox1.Text + NewLine + textBox2.Text + NewLine + 'true');
+    self.Close;
 end;
 
 procedure Form2.maskedTextBox1_MaskInputRejected(sender: Object; e: MaskInputRejectedEventArgs);
@@ -102,6 +98,16 @@ procedure Form2.Form2_Load(sender: Object; e: EventArgs);
 begin
  textBox1.Text:= ReadAllLines('Credentials.txt')[0];
  textBox2.Text:= ReadAllLines('Credentials.txt')[1];
+end;
+
+procedure Form2.button2_Click(sender: Object; e: EventArgs);
+begin
+  self.Close;
+end;
+
+procedure Form2.label3_Click(sender: Object; e: EventArgs);
+begin
+  
 end;
 
 end.

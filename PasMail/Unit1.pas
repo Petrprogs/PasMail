@@ -2,19 +2,18 @@
 
 interface
 
-uses System, System.Drawing, System.Windows.Forms, System.Xml.Linq, Unit2, System.IO, System.Xml;
+uses System, System.Drawing, System.Windows.Forms, System.Xml.Linq, Unit2, System.IO, System.Xml, MessageDB, Microsoft.Office.Interop.Access.Dao;
 
 var
   inbox: MailKit.IMailFolder;
   InboxCount, i: integer;
   t: System.Threading.Thread;
-
-var
   msgs: XmlDocument;
-
-var
-  message: array [0..1000] of MimeKit.MimeMessage;
+  message: array [0..10000] of MimeKit.MimeMessage;
   Credentials: array of string;
+  DB := new MessageDB.TMessageDB;
+  count: integer;
+  client := new MailKit.Net.Imap.ImapClient;
 
 type
   Form1 = class(Form)
@@ -32,6 +31,8 @@ type
     procedure checkedListBox1_KeyDown(sender: Object; e: KeyEventArgs);
     procedure notifyIcon1_Click(sender: Object; e: EventArgs);
     procedure button4_Click(sender: Object; e: EventArgs);
+    procedure checkedListBox1_ItemCheck(sender: Object; e: ItemCheckEventArgs);
+    procedure checkedListBox1_DoubleClick(sender: Object; e: EventArgs);
   {$region FormDesigner}
   internal
     {$resource Unit1.Form1.resources}
@@ -51,8 +52,9 @@ type
     contextMenuStrip1: System.Windows.Forms.ContextMenuStrip;
     components: System.ComponentModel.IContainer;
     checkedListBox1: CheckedListBox;
-    notifyIcon1: NotifyIcon;
     button4: Button;
+    toolStripProgressBar1: ToolStripProgressBar;
+    dataView1: System.Data.DataView;
     richTextBox1: RichTextBox;
     {$include Unit1.Form1.inc}
   {$endregion FormDesigner}
@@ -70,25 +72,34 @@ begin
   var indexcount := CheckedListBox1.SelectedIndex;
   if indexcount = -1 then 
     indexcount := 0;
-  msgs.Load(Directory.GetFiles('.\\DB\')[indexcount]);
-  label4.Text := msgs.GetElementsByTagName('Subject')[0].InnerText;
-  label1.Text := msgs.GetElementsByTagName('From')[0].InnerText;
-  label6.Text := msgs.GetElementsByTagName('Date')[0].InnerText;
-  richTextBox1.Rtf := msgs.GetElementsByTagName('Body')[0].InnerText;
+  richTextBox1.Rtf := ReadAllText(DB.ReadingDBIndex('path', indexcount));//ReadAllText(Directory.GetFiles('.\\DB\')[indexcount]);
+  label1.Text := DB.ReadingDBIndex('from', indexcount);
+  label4.Text := DB.ReadingDBIndex('subject', indexcount);
+  label6.Text := DB.ReadingDBIndex('date', indexcount);
 end;
 /// Add messages to chekedlistbox
 procedure Form1.addmsgtolist();
 begin
-  CheckedlistBox1.Items.Clear;
-  //ListBox1.Items.Clear;
-  //var tm:= Directory.GetFiles('.\\DB\').Length - 1;
-  msgs := new XmlDocument;
-  for var i := 0 to Directory.GetFiles('.\\DB\').Length - 1 do
+  MessageDB.MessageDBRecSet := AccessDB.OpenRecordset('Message DB');
+  try
+    MessageDBRecSet.MoveFirst;
+  except 
+    on ex: Exception do
+  end;
+  if checkedListBox1.IsHandleCreated then
+    checkedListBox1.Invoke(CheckedlistBox1.Items.Clear);
+  if checkedListBox1.IsHandleCreated then
+    checkedListBox1.Invoke(CheckedListBox1.Items.Add(MessageDBRecSet.Fields['subject'].Value.ToString).GetType);
+  for var i := 0 to Directory.GetFiles('./DB').Length - 2 do
   begin
-    msgs.Load(Directory.GetFiles('.\\DB\')[i]);
-    CheckedListBox1.Items.Add(msgs.GetElementsByTagName('Subject')[0].InnerText);
-    if msgs.GetElementsByTagName('Isreaded')[0].InnerText = 'false' then 
-      checkedListBox1.SetItemCheckState(i, CheckState.Indeterminate);
+    if checkedListBox1.IsHandleCreated then
+      checkedListBox1.BeginInvoke(CheckedListBox1.Items.Add(DB.ReadingDB('subject')).GetType);     
+  end;
+  MessageDBRecSet.MoveFirst;
+  for var i := 0 to Directory.GetFiles('./DB').Length - 2 do
+  begin
+    if checkedListBox1.IsHandleCreated then
+      CheckedListBox1.SetItemChecked(i, boolean.Parse(DB.ReadingDB('isreaded')));     
   end;
 end;
 
@@ -98,108 +109,108 @@ end;
 
 procedure Form1.Sync();
 var
+  fromstr := 'Nan';
   networkerror: boolean;
 begin
-  repeat
+  try
     begin
-      try
-        begin
-          networkerror := false;
-          Credentials := ReadAllLines('Credentials.txt');
-          Writeln('DEBUG');
-          var client := new MailKit.Net.Imap.ImapClient;
-          client.Connect('imap.yandex.ru', 993, true);
-          client.Authenticate(Credentials[0], Credentials[1]);
+      networkerror := false;
+      Credentials := ReadAllLines('credentials.txt');
+      lock client.SyncRoot do
+        client.Connect('imap.yandex.ru', 993, true);
+      client.Authenticate(Credentials[0], Credentials[1]);
           // The Inbox folder is always available on all IMAP servers...
-          inbox := client.Inbox;
-          inbox.Open(MailKit.FolderAccess.ReadWrite);				
-          InboxCount := inbox.Count;
-          for var i := 0 to (InboxCount - 1) do
-          begin
-            var index := i;
-            var body: string;
-            message[i] := inbox.GetMessage(i);
-            if System.IO.File.Exists('.\\DB\' + message[i].MessageId + '.xml') then 
+      inbox := client.Inbox;
+      inbox.Open(MailKit.FolderAccess.ReadOnly);
+      if not inbox.IsOpen then
+        MessageBox.Show('Inbox folder not open!', 'Folder');
+      Sleep(100);
+      statusStrip1.BeginInvoke(toolStripProgressBar1.GetType);
+      toolStripProgressBar1.Maximum := inbox.Count - 1;
+      for var i := 0 to (inbox.Count - 1) do
+      begin
+        toolStripProgressBar1.Value := i;
+        var body: string;
+        lock inbox.SyncRoot do
+          message[i] := inbox.GetMessage(i);
+        if System.IO.File.Exists('./DB/' + message[i].MessageId) then 
             else
-            begin
-              if message[i].HtmlBody = '' then
-                body := message[i].TextBody
+        begin
+          if message[i].HtmlBody = '' then
+            body := message[i].TextBody
               else
-              begin
-                body := message[i].HtmlBody;
-                //Writeln(body);
-                var convert := new SautinSoft.HtmlToRtf;
-                convert.PreserveImages := true;
-                convert.PreserveFontFace := true;
-                convert.PreserveHttpCss := true;
-                convert.PreserveFontColor := true;
-                convert.PreserveBackgroundColor := true;
-                convert.PreserveAlignment := true;
-                convert.PreserveHyperlinks := true;
-                convert.Encoding := SautinSoft.HtmlToRtf.eEncoding.AutoDetect;
-                var error := true;
-                while error = true do
+          begin
+            body := message[i].HtmlBody;
+            var convert := new SautinSoft.HtmlToRtf;
+            convert.PreserveImages := true;
+            convert.PreserveFontFace := true;
+            convert.PreserveHttpCss := true;
+            convert.PreserveFontColor := true;
+            convert.PreserveBackgroundColor := true;
+            convert.PreserveAlignment := true;
+            convert.PreserveHyperlinks := true;
+            convert.PreserveFontSize := true;
+            convert.PreserveHttpImages := true;
+            convert.PreserveNestedTables := true;
+            convert.PreserveTables := true;
+            convert.RtfCompatibility := SautinSoft.HtmlToRtf.eRtfCompatibility.OldRtfReaders;
+            convert.TableFastProcessing := true;
+            convert.TableFitWidthByPage := true;
+            convert.Encoding := SautinSoft.HtmlToRtf.eEncoding.AutoDetect;
+            var error := true;
+            while error = true do
+            begin
+              try
+                convert.OpenHtml(body);
+                body := convert.ToRtf;
+                error := false;
+              except
+                on ex: Exception do
                 begin
-                  try
-                    convert.OpenHtml(body);
-                    body := convert.ToRtf;
-                    error := false;
-                  except
-                    on ex: Exception do
-                    begin
-                      error := true;
-                      body := message[i].TextBody;  
-                      convert.InputFormat := SautinSoft.HtmlToRtf.eInputFormat.Text;
-                    end;
-                  end;
+                  error := true;
+                  body := message[i].TextBody;  
+                  convert.InputFormat := SautinSoft.HtmlToRtf.eInputFormat.Text;
                 end;
-                Sleep(1000);
-                var fetch := inbox.Fetch(i, i, MailKit.MessageSummaryItems.Flags);
-                var checkseen := fetch[0].Flags.Value.HasFlag(MailKit.MessageFlags.Seen);
-                Write(checkseen);
-                var xdoc := new XDocument(new XElement('Message',
-                new System.Xml.Linq.XElement('Subject', message[i].Subject), 
-                new System.Xml.Linq.XElement('Isreaded', checkseen),
-                new System.Xml.Linq.XElement('Body', body),
-                new System.Xml.Linq.XElement('From', message[i].From[0].Name), 
-                new System.Xml.Linq.XElement('Date', message[i].Date.DateTime.ToString('dd.mm.yyyy hh:mm'))));
-                xdoc.Save('.\\DB\' + message[i].MessageId + '.xml');
-                foreach var attachment in message[I].Attachments do
-                begin
-                  Writeln(attachment.ContentType);
-                  var stream := System.IO.File.Create(attachment.ContentId);
-                  if attachment is MimeKit.MessagePart then
-                  begin
-                    var rfc855: Mimekit.MessagePart; 
-                    rfc855.Message.WriteTo(stream);
-                  end
-                  else
-                  begin
-                    var part: Mimekit.MimePart;
-                    part.Content.DecodeTo(stream);
-                  end;
-                end;
-                
               end;
             end;
-          end;   
-          addmsgtolist;
-          toolStripStatusLabel1.Text := 'Synchronization finished!';
-        end;
-      
-      except
-        on 
-        ex: System.Net.Sockets.SocketException do 
-        begin
-          MessageBox.Show('Network error(Сетевая ошибка)', 'Error!', MessageBoxButtons.OK, MessageBoxIcon.Error);
-          networkerror := true;
-          Writeln(ex.Message);
-        end;
-        on e: Exception do
-          WriteAllText('Exceptions.txt', e.StackTrace);
+            Sleep(1000);
+            var fetch := inbox.Fetch(i, i, MailKit.MessageSummaryItems.Flags);
+            var checkseen := fetch[0].Flags.Value.HasFlag(MailKit.MessageFlags.Seen);
+            if message[i].From[0].Name = string.Empty then
+              fromstr := 'Nan'
+            else
+              fromstr := message[i].From[0].Name;
+            DB.FillingDB(i.ToString, fromstr, message[i].Date.DateTime.ToString('dd.mm.yyyy hh:mm'), message[i].Subject, '.\\DB\' + message[i].MessageId, checkseen.ToString);
+            WriteAllText('.\DB\' + message[i].MessageId, body);
+            foreach var attachment in message[I].Attachments do
+            begin
+              Writeln(attachment.ContentType);
+              var stream := System.IO.File.Create(attachment.ContentId);
+              if attachment is MimeKit.MessagePart then
+              begin
+                var rfc855: Mimekit.MessagePart; 
+                rfc855.Message.WriteTo(stream);
+              end
+                  else
+              begin
+                var part: Mimekit.MimePart;
+                part.Content.DecodeTo(stream);
+              end;
+            end;
+          end;
+        end;   
       end;
+      toolStripStatusLabel1.Text := 'Synchronization finished!';
     end;
-  until networkerror = true;
+  except
+    on 
+    ex: System.Net.Sockets.SocketException do 
+    begin
+      MessageBox.Show('Network error(Сетевая ошибка)', 'Error!', MessageBoxButtons.OK, MessageBoxIcon.Error);
+      networkerror := true;
+    end;
+  end; 
+  addmsgtolist;
 end;
 
 procedure Form1.button1_Click(sender: Object; e: EventArgs);
@@ -209,7 +220,7 @@ end;
 
 procedure Form1.Form1_Load(sender: Object; e: EventArgs);
 begin
-  
+  DB.DatabaseOpen('messages.mdb');
 end;
 
 procedure Form1.Form1_Validated(sender: Object; e: EventArgs);
@@ -219,21 +230,32 @@ end;
 
 procedure Form1.Form1_Shown(sender: Object; e: EventArgs);
 begin
-  if ReadAllText('Credentials.txt') = '' then  
+  MessageDB.MessageDBRecSet := AccessDB.OpenRecordset('Message DB');
+  if ReadAllText('credentials.txt') = '' then
   begin
-    MessageBox.Show('You must enter your credentials in the settings!When you enter credentials, please restart programm.(Вы должны указать свои учетные данные в настройках! Когда вы сделаете это, то перезапустите программу)', 'Error', MessageBoxButtons.OK, MessageBoxIcon.Error);
+    MessageBox.Show('You must enter your credentials in the settings! When you enter credentials, please restart programm. (Вы должны указать свои учетные данные в настройках! Когда вы сделаете это, то перезапустите программу)', 'Error', MessageBoxButtons.OK, MessageBoxIcon.Error);
+    Unit2.Form2.Create.Show;
     exit;
   end;
   if Directory.Exists('DB') then
       else
   begin
-    MessageBox.Show('Directory "DB" not found! It seems you delete it! All message DB is deleted!(Дериктория "DB" не найдена! Похоже Вы удалили ее! Вся база данных сообщений была удалена!)', '', MessageBoxButtons.OK, MessageBoxIcon.Error);
+    MessageBox.Show('Directory "DB" not found! It seems you delete it! All message DB is deleted! (Дериктория "DB" не найдена! Похоже Вы удалили ее! Вся база данных сообщений была удалена!)', '', MessageBoxButtons.OK, MessageBoxIcon.Error);
     MkDir('DB');
   end;
   toolStripStatusLabel1.Text := 'Synchronization started...';  
-  t := new System.Threading.Thread(Sync);
-  t.Start; 
-  addmsgtolist; 
+  var tst := MessageDBRecSet.RecordCount;
+  if MessageDBRecSet.RecordCount = 0 then
+  begin
+    t := new System.Threading.Thread(Sync);
+    t.Start;
+  end
+  else
+  begin
+    addmsgtolist;
+    t := new System.Threading.Thread(Sync);
+    t.Start;
+  end;
 end;
 
 procedure Form1.button2_Click(sender: Object; e: EventArgs);
@@ -243,23 +265,17 @@ end;
 
 procedure Form1.Form1_FormClosing(sender: Object; e: FormClosingEventArgs);
 begin
-  if ReadAllLines('Credentials.txt')[2] = 'true' then 
-    Form1.Create.Close
-  else
-  begin
-    var msg: System.Windows.Forms.DialogResult := MessageBox.Show('It seems programm now is synchronizating with server. Do you realy want to exit?',
+  var msg: System.Windows.Forms.DialogResult := MessageBox.Show('Do you realy want to exit?',
     'Exit',
     MessageBoxButtons.YesNo, 
     MessageBoxIcon.Question);
-    if t.IsAlive = true then
-      if msg = System.Windows.Forms.DialogResult.Yes then
-      begin
-        t.Abort;
-        Halt(0);
-      end
-      else
-        e.Cancel := true;
-  end;
+  if msg = System.Windows.Forms.DialogResult.Yes then
+  begin
+    t.Abort;
+    Halt(0);
+  end
+  else
+    e.Cancel := true;
 end;
 
 procedure Form1.toolStripProgressBar1_Click(sender: Object; e: EventArgs);
@@ -288,5 +304,14 @@ procedure Form1.button4_Click(sender: Object; e: EventArgs);
 begin
   //TODO 
   //  Create a help page and exec it here
+end;
+
+procedure Form1.checkedListBox1_ItemCheck(sender: Object; e: ItemCheckEventArgs);
+begin
+  
+end;
+
+procedure Form1.checkedListBox1_DoubleClick(sender: Object; e: EventArgs);
+begin
 end;
 end.

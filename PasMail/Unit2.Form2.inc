@@ -10,7 +10,8 @@ procedure InitializeComponent;
         self.label1 := new System.Windows.Forms.Label();
         self.textBox2 := new System.Windows.Forms.TextBox();
         self.tabPage2 := new System.Windows.Forms.TabPage();
-        self.checkBox1 := new System.Windows.Forms.CheckBox();
+        self.button2 := new System.Windows.Forms.Button();
+        self.label3 := new System.Windows.Forms.Label();
         self.tabControl1.SuspendLayout();
         self.tabPage1.SuspendLayout();
         self.tabPage2.SuspendLayout();
@@ -100,7 +101,7 @@ procedure InitializeComponent;
         // 
         // tabPage2
         // 
-        self.tabPage2.Controls.Add(self.checkBox1);
+        self.tabPage2.Controls.Add(self.label3);
         self.tabPage2.Location := new System.Drawing.Point(4, 22);
         self.tabPage2.Name := 'tabPage2';
         self.tabPage2.Padding := new System.Windows.Forms.Padding(3);
@@ -109,19 +110,31 @@ procedure InitializeComponent;
         self.tabPage2.Text := 'Main';
         self.tabPage2.UseVisualStyleBackColor := true;
         // 
-        // checkBox1
+        // button2
         // 
-        self.checkBox1.Location := new System.Drawing.Point(6, 7);
-        self.checkBox1.Name := 'checkBox1';
-        self.checkBox1.Size := new System.Drawing.Size(105, 24);
-        self.checkBox1.TabIndex := 0;
-        self.checkBox1.Text := 'Close to tray';
-        self.checkBox1.UseVisualStyleBackColor := true;
-        self.checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+        self.button2.Location := new System.Drawing.Point(242, 114);
+        self.button2.Name := 'button2';
+        self.button2.Size := new System.Drawing.Size(75, 23);
+        self.button2.TabIndex := 8;
+        self.button2.Text := 'Cancel';
+        self.button2.UseVisualStyleBackColor := true;
+        self.button2.Click += button2_Click;
+        // 
+        // label3
+        // 
+        self.label3.Font := new System.Drawing.Font('Microsoft Sans Serif', 12, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
+        self.label3.Location := new System.Drawing.Point(6, 3);
+        self.label3.Name := 'label3';
+        self.label3.Size := new System.Drawing.Size(233, 23);
+        self.label3.TabIndex := 0;
+        self.label3.Text := 'Будет позже';
+        self.label3.Click += label3_Click;
         // 
         // Form2
         // 
         self.ClientSize := new System.Drawing.Size(409, 144);
+        self.ControlBox := false;
+        self.Controls.Add(self.button2);
         self.Controls.Add(self.tabControl1);
         self.Controls.Add(self.OK);
         self.Name := 'Form2';

@@ -5,6 +5,7 @@
     <Item Type="SourceFile" Name="Unit1.pas" Path="Unit1.pas" />
     <Item Type="SourceFile" Name="Unit2.pas" Path="Unit2.pas" />
     <Item Type="SourceFile" Name="Splash_Screen.pas" Path="Splash_Screen.pas" />
+    <Item Type="SourceFile" Name="MessageDB.pas" Path="MessageDB.pas" />
     <Item Type="Reference" AssemblyName="System" FullAssemblyName="System.dll" />
     <Item Type="Reference" AssemblyName="System.Windows.Forms" FullAssemblyName="System.Windows.Forms.dll" />
     <Item Type="Reference" AssemblyName="System.Drawing" FullAssemblyName="System.Drawing.dll" />
@@ -20,7 +21,8 @@
     <Item Type="Reference" AssemblyName="System.Reflection.TypeExtensions" FullAssemblyName="System.Reflection.TypeExtensions.dll" />
     <Item Type="Reference" AssemblyName="System.Security.Cryptography.Pkcs" FullAssemblyName="System.Security.Cryptography.Pkcs.dll" />
     <Item Type="Reference" AssemblyName="System.Text.Encoding.CodePages" FullAssemblyName="System.Text.Encoding.CodePages.dll" />
-    <Item Type="Reference" AssemblyName="MarkupConverter" FullAssemblyName="MarkupConverter.dll" />
     <Item Type="Reference" AssemblyName="SautinSoft.HtmlToRtf" FullAssemblyName="SautinSoft.HtmlToRtf.dll" />
+    <Item Type="Reference" AssemblyName="System.Drawing.Html" FullAssemblyName="System.Drawing.Html.dll" />
+    <Item Type="Reference" AssemblyName="Microsoft.Office.Interop.Access.Dao" FullAssemblyName="Microsoft.Office.Interop.Access.Dao.dll" />
   </Items>
 </Project>

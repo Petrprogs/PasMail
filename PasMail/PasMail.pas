@@ -1,5 +1,4 @@
-﻿//{$resource resources.rc} 
-uses Unit1,Unit2, Splash_Screen;
+﻿uses Unit1,Unit2, Splash_Screen;
 
 begin
   System.Windows.Forms.Application.EnableVisualStyles();

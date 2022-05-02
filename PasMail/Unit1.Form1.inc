@@ -11,18 +11,20 @@ procedure InitializeComponent;
         self.label6 := new System.Windows.Forms.Label();
         self.statusStrip1 := new System.Windows.Forms.StatusStrip();
         self.toolStripStatusLabel1 := new System.Windows.Forms.ToolStripStatusLabel();
+        self.toolStripProgressBar1 := new System.Windows.Forms.ToolStripProgressBar();
         self.tabControl1 := new System.Windows.Forms.TabControl();
         self.tabPage1 := new System.Windows.Forms.TabPage();
+        self.button4 := new System.Windows.Forms.Button();
         self.button1 := new System.Windows.Forms.Button();
         self.button2 := new System.Windows.Forms.Button();
         self.button3 := new System.Windows.Forms.Button();
         self.contextMenuStrip1 := new System.Windows.Forms.ContextMenuStrip(self.components);
         self.checkedListBox1 := new System.Windows.Forms.CheckedListBox();
-        self.notifyIcon1 := new System.Windows.Forms.NotifyIcon(self.components);
-        self.button4 := new System.Windows.Forms.Button();
+        self.dataView1 := new System.Data.DataView();
         self.statusStrip1.SuspendLayout();
         self.tabControl1.SuspendLayout();
         self.tabPage1.SuspendLayout();
+        (System.ComponentModel.ISupportInitialize(self.dataView1)).BeginInit();
         self.SuspendLayout();
         // 
         // richTextBox1
@@ -34,7 +36,7 @@ procedure InitializeComponent;
         self.richTextBox1.Location := new System.Drawing.Point(332, 152);
         self.richTextBox1.Name := 'richTextBox1';
         self.richTextBox1.ReadOnly := true;
-        self.richTextBox1.Size := new System.Drawing.Size(739, 479);
+        self.richTextBox1.Size := new System.Drawing.Size(740, 479);
         self.richTextBox1.TabIndex := 0;
         self.richTextBox1.Text := '';
         // 
@@ -94,7 +96,7 @@ procedure InitializeComponent;
         // 
         // statusStrip1
         // 
-        self.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[1](self.toolStripStatusLabel1));
+        self.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[2](self.toolStripStatusLabel1, self.toolStripProgressBar1));
         self.statusStrip1.Location := new System.Drawing.Point(0, 658);
         self.statusStrip1.Name := 'statusStrip1';
         self.statusStrip1.Size := new System.Drawing.Size(1084, 22);
@@ -103,9 +105,17 @@ procedure InitializeComponent;
         // 
         // toolStripStatusLabel1
         // 
+        self.toolStripStatusLabel1.BackgroundImageLayout := System.Windows.Forms.ImageLayout.None;
+        self.toolStripStatusLabel1.DisplayStyle := System.Windows.Forms.ToolStripItemDisplayStyle.Text;
         self.toolStripStatusLabel1.Name := 'toolStripStatusLabel1';
-        self.toolStripStatusLabel1.Size := new System.Drawing.Size(0, 17);
+        self.toolStripStatusLabel1.Size := new System.Drawing.Size(31, 17);
+        self.toolStripStatusLabel1.Text := '        ';
         self.toolStripStatusLabel1.Click += toolStripStatusLabel1_Click;
+        // 
+        // toolStripProgressBar1
+        // 
+        self.toolStripProgressBar1.Name := 'toolStripProgressBar1';
+        self.toolStripProgressBar1.Size := new System.Drawing.Size(100, 16);
         // 
         // tabControl1
         // 
@@ -128,6 +138,17 @@ procedure InitializeComponent;
         self.tabPage1.Size := new System.Drawing.Size(1075, 42);
         self.tabPage1.TabIndex := 0;
         self.tabPage1.Text := 'Main';
+        // 
+        // button4
+        // 
+        self.button4.BackColor := System.Drawing.Color.Cyan;
+        self.button4.Location := new System.Drawing.Point(199, 6);
+        self.button4.Name := 'button4';
+        self.button4.Size := new System.Drawing.Size(79, 30);
+        self.button4.TabIndex := 13;
+        self.button4.Text := 'Help Me!';
+        self.button4.UseVisualStyleBackColor := false;
+        self.button4.Click += button4_Click;
         // 
         // button1
         // 
@@ -182,26 +203,10 @@ procedure InitializeComponent;
         self.checkedListBox1.Size := new System.Drawing.Size(322, 559);
         self.checkedListBox1.TabIndex := 14;
         self.checkedListBox1.ThreeDCheckBoxes := true;
+        self.checkedListBox1.ItemCheck += checkedListBox1_ItemCheck;
         self.checkedListBox1.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
+        self.checkedListBox1.DoubleClick += checkedListBox1_DoubleClick;
         self.checkedListBox1.KeyDown += checkedListBox1_KeyDown;
-        // 
-        // notifyIcon1
-        // 
-        self.notifyIcon1.Icon := (System.Drawing.Icon(resources.GetObject('notifyIcon1.Icon')));
-        self.notifyIcon1.Text := 'PasMail';
-        self.notifyIcon1.Visible := true;
-        self.notifyIcon1.Click += notifyIcon1_Click;
-        // 
-        // button4
-        // 
-        self.button4.BackColor := System.Drawing.Color.Cyan;
-        self.button4.Location := new System.Drawing.Point(199, 6);
-        self.button4.Name := 'button4';
-        self.button4.Size := new System.Drawing.Size(79, 30);
-        self.button4.TabIndex := 13;
-        self.button4.Text := 'Help Me!';
-        self.button4.UseVisualStyleBackColor := false;
-        self.button4.Click += button4_Click;
         // 
         // Form1
         // 
@@ -234,6 +239,7 @@ procedure InitializeComponent;
         self.statusStrip1.PerformLayout();
         self.tabControl1.ResumeLayout(false);
         self.tabPage1.ResumeLayout(false);
+        (System.ComponentModel.ISupportInitialize(self.dataView1)).EndInit();
         self.ResumeLayout(false);
         self.PerformLayout();
     end;

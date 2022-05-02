@@ -25,6 +25,7 @@ procedure InitializeComponent;
         // 
         // Form3
         // 
+        self.BackgroundImageLayout := System.Windows.Forms.ImageLayout.None;
         self.ClientSize := new System.Drawing.Size(420, 438);
         self.ControlBox := false;
         self.Controls.Add(self.pictureBox1);
@@ -33,6 +34,8 @@ procedure InitializeComponent;
         self.MaximizeBox := false;
         self.MinimizeBox := false;
         self.Name := 'Form3';
+        self.ShowIcon := false;
+        self.ShowInTaskbar := false;
         self.StartPosition := System.Windows.Forms.FormStartPosition.CenterScreen;
         self.Shown += Form3_Shown;
         self.Scroll += Form3_Scroll;
