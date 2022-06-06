@@ -126,7 +126,7 @@ var
   fromstr := 'Nan';
   networkerror: boolean;
 begin
-  log.NewEvent('Sycn started...');
+  log.NewEvent('Sync started...');
   try
     begin
       client := new MailKit.Net.Imap.ImapClient;
@@ -181,6 +181,7 @@ begin
           message[i] := inbox.GetMessage(i);
 		  //Checking the message on availability
         if System.IO.File.Exists('./DB/' + message[i].MessageId.Replace('\', string.Empty).Replace('/', string.Empty) + '.html') then 
+          log.NewEvent('Message already availlable!')
             else
         begin
 		// If the message has no html body then use plain text body
