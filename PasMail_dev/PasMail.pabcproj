@@ -6,6 +6,7 @@
     <Item Type="SourceFile" Name="Unit2.pas" Path="Unit2.pas" />
     <Item Type="SourceFile" Name="Splash_Screen.pas" Path="Splash_Screen.pas" />
     <Item Type="SourceFile" Name="MessageDB.pas" Path="MessageDB.pas" />
+    <Item Type="SourceFile" Name="Logger.pas" Path="Logger.pas" />
     <Item Type="Reference" AssemblyName="System" FullAssemblyName="System.dll" />
     <Item Type="Reference" AssemblyName="System.Windows.Forms" FullAssemblyName="System.Windows.Forms.dll" />
     <Item Type="Reference" AssemblyName="System.Drawing" FullAssemblyName="System.Drawing.dll" />

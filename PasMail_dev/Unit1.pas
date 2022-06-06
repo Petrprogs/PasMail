@@ -2,7 +2,7 @@
 
 interface
 
-uses System, System.Drawing, System.Windows.Forms, System.Xml.Linq, Unit2, System.IO, System.Xml, MessageDB, Microsoft.Office.Interop.Access.Dao, Microsoft.Win32;
+uses System, System.Drawing, System.Windows.Forms, System.Xml.Linq, Unit2, System.IO, System.Xml, MessageDB, Microsoft.Office.Interop.Access.Dao, Microsoft.Win32, Logger;
 
 var
   inbox: MailKit.IMailFolder;
@@ -17,7 +17,8 @@ var
   formatopt := new MimeKit.FormatOptions;
   subjstr := 'Nan';
   attachpath: string;
-  timerevent:= 1;
+  log:= new TLogger;
+  
 type
   Form1 = class(Form)
     procedure button1_Click(sender: Object; e: EventArgs);
@@ -125,6 +126,7 @@ var
   fromstr := 'Nan';
   networkerror: boolean;
 begin
+  log.NewEvent('Sycn started...');
   try
     begin
       client := new MailKit.Net.Imap.ImapClient;
@@ -132,6 +134,7 @@ begin
       toolStripStatusLabel1.Text := 'Connecting to server...';
       networkerror := false;
       Credentials := ReadAllLines('credentials.txt');
+      log.NewEvent('Connecting to server...');
       if client.IsConnected then
         else
       begin
@@ -139,6 +142,8 @@ begin
           client.Connect(Credentials[3], 993, true);
       end;
       toolStripStatusLabel1.Text := 'Succesfully connected! Authenticating...';
+      log.NewEvent('Connected succesfully!');
+      log.NewEvent('Authing...');
       try
         begin
           client.Authenticate(Credentials[0], Credentials[1]);
@@ -147,20 +152,24 @@ begin
         on InvalidLogin: MailKit.Security.AuthenticationException do
         begin
           MessageBox.Show('Authentication failed on the server, please check the username and password in the settings.', 'Authentication error', MessageBoxButtons.Ok, MessageBoxIcon.Exclamation);
+          log.NewEvent('Auth failed - invalid credentials!');
           exit;
         end;
       end;
           // The Inbox folder is always available on all IMAP servers...
+     log.NewEvent('Opening inbox folder for read-write');
       inbox := client.Inbox;
 	  //Set folder access read and write
       inbox.Open(MailKit.FolderAccess.ReadWrite);
 	  // Set toolStripStatusLabel1 text to succesfull auth
+	  log.NewEvent('Opening succesfully!');
       toolStripStatusLabel1.Text := 'Succesfully Authenticated! Synchronizating...';
 	  // Invoke all statusStrip to properly sync thread
       statusStrip1.BeginInvoke(toolStripProgressBar1.GetType);
 	  // Set maximum of progress bar
       toolStripProgressBar1.Maximum := inbox.Count - 1;
 	  //Main cycle of sync
+	  log.NewEvent('Checking for new messages...');
       for var i := 0 to (inbox.Count - 1) do
       begin
 	  //Set progressbar value to cycle inumirator
@@ -175,6 +184,7 @@ begin
             else
         begin
 		// If the message has no html body then use plain text body
+		log.NewEvent('New message found!');
           if message[i].HtmlBody = '' then
             body := message[i].TextBody
           else
@@ -193,6 +203,7 @@ begin
 			// Open DB recordes for writing
           MessageDBRecSet := AccessDB.OpenRecordset('MessageDB');
 		  // Write body to file
+		  log.NewEvent('Writing new message...');
           System.IO.File.AppendAllText('.\DB\' + message[i].MessageId.Replace('\', string.Empty).Replace('/', string.Empty) + '.html', body, Encoding.GetEncoding('windows-1251'));
 		  // Check for attachments
           foreach var attachment in message[I].BodyParts do
@@ -212,13 +223,15 @@ begin
               attachpath := 'Nan'
           end;
 		  // Fill the DB
-          DB.FillingDB(i, message[i].Date.UtcDateTime, fromstr, subjstr, '.\\DB\' + message[i].MessageId.Replace('\', string.Empty).Replace('/', string.Empty) + '.html', checkseen, attachpath);
+          DB.FillingDB(i, message[i].Date.DateTime, fromstr, subjstr, '.\\DB\' + message[i].MessageId.Replace('\', string.Empty).Replace('/', string.Empty) + '.html', checkseen, attachpath);
+          log.NewEvent('Writing succesfull!');
         end;   
       end;
 	  // Collect garbage
       GC.Collect();
 	  // Set toolStripStatusLabel1 to "succesfully synced"
       toolStripStatusLabel1.Text := 'Succesfully Synchronizated!';
+      log.NewEvent('Succesfully Synchronizated!');
     end;
   
   //Catch network exception
@@ -228,6 +241,7 @@ begin
     begin
       MessageBox.Show('Network error(Сетевая ошибка)', 'Error!', MessageBoxButtons.OK, MessageBoxIcon.Error);
       networkerror := true;
+      log.NewEvent('Network error - check internet connection!');
       exit;
     end;
   end; 
@@ -259,24 +273,31 @@ end;
 
 procedure Form1.Form1_Shown(sender: Object; e: EventArgs);
 begin
+ // Write line to log, that app is started
+  log.NewEvent('Pasmail starting!');
 // Open DB
   DB.DatabaseOpen('messages.mdb');
   // Open  recordset
   MessageDBRecSet := AccessDB.OpenRecordset('SELECT * FROM MessageDB ORDER BY date DESC');
   // If credentials.txt is empty, then a message will be displayed about the need to enter a username and password
+  log.NewEvent('Checking for credentials...');
   if ReadAllText('credentials.txt') = '' then
   begin
     MessageBox.Show('You must enter your credentials in the settings! When you enter credentials, please restart programm. (Вы должны указать свои учетные данные в настройках! Когда вы сделаете это, то перезапустите программу)', 'Error', MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
     Unit2.Form2.Create.Show;
   end;
+  log.NewEvent('Succesfull!');
   //Checking the DB folder on availability. If it is empty, then show the message
+  log.NewEvent('Checking for DB...');
   if Directory.Exists('DB') then
       else
   begin
     MessageBox.Show('Directory "DB" not found! It seems you delete it! All message DB is deleted! (Дериктория "DB" не найдена! Похоже Вы удалили ее! Вся база данных сообщений была удалена!)', '', MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
     MkDir('DB');
+    MkDir('./DB/Attachments');
     exit;
   end;
+  log.NewEvent('Succesfull!');
   // If now messages found, start the sync thread
   if MessageDBRecSet.RecordCount = 0 then
   begin
@@ -290,6 +311,7 @@ begin
     t := new System.Threading.Thread(Sync);
     t.Start;
   end;
+  log.NewEvent('Pasmail started succesfully!');
 end;
 
 // Settings button
@@ -313,6 +335,7 @@ begin
       t.Abort;
     MessageDB.AccessDB.Close;
     client := nil;
+    log.NewEvent('Pasmail closed!');
     Halt(0);
   end
   else
