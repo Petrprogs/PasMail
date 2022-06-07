@@ -15,7 +15,7 @@ type
     procedure CreateNewTable(TableName: String);
     procedure DatabaseCreate(DatabaseName: String);
     procedure DatabaseOpen(DatabaseName: String);
-    procedure FillingDB(no, from, date, subject, path, isreaded: string);
+    procedure FillingDB(no: integer; date: DateTime; from, subject, path: string; isreaded: boolean; attachments: string);
     function ReadingDB(name: string): string;
     function ReadingDBIndex(name: string; index: integer): string;
   end;
@@ -29,12 +29,13 @@ var
 begin  
   // Create a new TableDef object
   TableDefNew := AccessDB.CreateTableDef(TableName);
-  TableDefNew.Fields.Append(TableDefNew.CreateField('No', DataTypeEnum.dbText, 10));
-  TableDefNew.Fields.Append(TableDefNew.CreateField('from', DataTypeEnum.dbText, 100));
-  TableDefNew.Fields.Append(TableDefNew.CreateField('date', DataTypeEnum.dbText, 100));
-  TableDefNew.Fields.Append(TableDefNew.CreateField('subject', DataTypeEnum.dbText, 100));
-  TableDefNew.Fields.Append(TableDefNew.CreateField('path', DataTypeEnum.dbText, 150));
-  TableDefNew.Fields.Append(TableDefNew.CreateField('isreaded', DataTypeEnum.dbText, 10));
+  TableDefNew.Fields.Append(TableDefNew.CreateField('No', DataTypeEnum.dbLong));
+  TableDefNew.Fields.Append(TableDefNew.CreateField('from', DataTypeEnum.dbText));
+  TableDefNew.Fields.Append(TableDefNew.CreateField('date', DataTypeEnum.dbDate));
+  TableDefNew.Fields.Append(TableDefNew.CreateField('subject', DataTypeEnum.dbText));
+  TableDefNew.Fields.Append(TableDefNew.CreateField('path', DataTypeEnum.dbText));
+  TableDefNew.Fields.Append(TableDefNew.CreateField('isreaded', DataTypeEnum.dbBoolean));
+  TableDefNew.Fields.Append(TableDefNew.CreateField('attachments_path', DataTypeEnum.dbText));
   AccessDB.TableDefs.Append(TableDefNew);
 end;
 
@@ -43,7 +44,7 @@ procedure MessageDB.TMessageDB.DatabaseCreate(DatabaseName: String);
 begin
   // Create new empty database
   AccessDB := AccessDBEngine.CreateDatabase(DatabaseName, LanguageConstants.dbLangGeneral);
-  CreateNewTable('Message DB');
+  CreateNewTable('MessageDB');
   AccessDB.Close;
 end;
 
@@ -55,20 +56,12 @@ begin
   if not FileExists(DatabaseName) then
     DatabaseCreate(DatabaseName);  
   AccessDB := AccessDBEngine.OpenDatabase(DatabaseName);  
-  MessageDBRecSet := AccessDB.OpenRecordset('Message DB', RecordsetTypeEnum.dbOpenDynaset);
-  try
-    MessageDBRecSet.MoveLast;
-    MessageDBRecSet.MoveFirst
-  except
-    on ex: Exception do
-  end;
 end;
 /// Filling DB
-procedure MessageDB.TMessageDB.FillingDB(no, from, date, subject, path, isreaded: string);
+procedure MessageDB.TMessageDB.FillingDB(no: integer; date: DateTime; from, subject, path: string; isreaded: boolean; attachments: string);
 var
-  NoFld, FromFld, DateFld, SubjectFld, PathFld, IsreadedFld: Microsoft.Office.Interop.Access.Dao.Field;
+  NoFld, FromFld, DateFld, SubjectFld, PathFld, IsreadedFld, AttachmentsPathFld: Microsoft.Office.Interop.Access.Dao.Field;
 begin
-  MessageDBRecSet := AccessDB.OpenRecordset('Message DB', RecordsetTypeEnum.dbOpenDynaset);
    // Declare fields for the populating new records into table
   NoFld := MessageDBRecSet.Fields.Item['No'];
   FromFld := MessageDBRecSet.Fields.Item['from'];
@@ -76,6 +69,7 @@ begin
   SubjectFld := MessageDBRecSet.Fields.Item['subject'];
   PathFld := MessageDBRecSet.Fields.Item['path'];
   IsreadedFld := MessageDBRecSet.Fields.Item['isreaded'];
+  AttachmentsPathFld := MessageDBRecSet.Fields.Item['attachments_path'];
   MessageDBRecSet.AddNew;
   NoFld.Value := no;
   FromFld.Value := from;
@@ -83,15 +77,16 @@ begin
   SubjectFld.Value := subject;
   PathFld.Value := path;
   IsreadedFld.Value := isreaded;
+  AttachmentsPathFld.Value := attachments;
   MessageDBRecSet.Update;
   MessageDBRecSet.Close;
 end;
-
+//Simple DB reading
 function MessageDB.TMessageDB.ReadingDB(name: string): string;
 begin
   if not MessageDBRecSet.EOF then
   begin
-      MessageDBRecSet.MoveNext;
+    MessageDBRecSet.MoveNext;
     if MessageDBRecSet.EOF then
     begin
       MessageDBRecSet.MoveLast;
@@ -101,7 +96,7 @@ begin
       ReadingDB := MessageDBRecSet.Fields[name].Value.ToString;
   end;
 end;
-
+//Reading DB with index
 function MessageDB.TMessageDB.ReadingDBIndex(name: string; index: integer): string;
 begin
   MessageDBRecSet.MoveFirst;
@@ -111,10 +106,11 @@ begin
   else
   begin
     repeat
-      MessageDBRecSet.MoveNext; 
-      test:= MessageDBRecSet.Fields['No'].Value.ToString.ToInteger;
+      MessageDBRecSet.MoveNext;
+      test := MessageDBRecSet.Fields['No'].Value.ToString.ToInteger;
     until test = index;
-  ReadingDBIndex := MessageDBRecSet.Fields[name].Value.ToString;
+    ReadingDBIndex := MessageDBRecSet.Fields[name].Value.ToString;
   end;
 end;
+
 end.
