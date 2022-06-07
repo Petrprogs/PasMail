@@ -360,8 +360,8 @@ begin
     inbox := client.Inbox;
     inbox.Open(MailKit.FolderAccess.ReadWrite);
     inbox.MoveTo(MessageDBRecSet.RecordCount - indexcount - 1, client.GetFolder(MailKit.SpecialFolder.Trash));
-    //inbox.AddFlags(MessageDBRecSet.RecordCount - indexcount - 1, MailKit.MessageFlags.Deleted, false);}
-	// TODO delete attachments files
+    Directory.Delete(DB.ReadingDBIndex('attachments_path', countindex - indexcount - 1), true);
+	Directory.Delete(DB.ReadingDBIndex('attachments_path', countindex - indexcount - 1));
     DeleteFile(DB.ReadingDBIndex('path', countindex - indexcount - 1));
     MessageDBRecSet.FindFirst('[No] =' + (countindex - indexcount - 1).ToString);
     MessageDBRecSet.Delete;
@@ -416,14 +416,13 @@ begin
     var indexcount := CheckedListBox1.SelectedIndex;
     if indexcount = -1 then 
       indexcount := 0;
-   client := new MailKit.Net.Imap.ImapClient;
+	client := new MailKit.Net.Imap.ImapClient;
     client.Connect('imap.yandex.ru', 993, true);
     client.Authenticate(Credentials[0], Credentials[1]);
     inbox := client.Inbox;
     inbox.Open(MailKit.FolderAccess.ReadWrite);
     inbox.MoveTo(MessageDBRecSet.RecordCount - indexcount - 1, client.GetFolder(MailKit.SpecialFolder.Trash));
-    //inbox.AddFlags(MessageDBRecSet.RecordCount - indexcount - 1, MailKit.MessageFlags.Deleted, false);}
-	// TODO delete attachments files
+	Directory.Delete(DB.ReadingDBIndex('attachments_path', countindex - indexcount - 1), true);
     DeleteFile(DB.ReadingDBIndex('path', countindex - indexcount - 1));
     MessageDBRecSet.FindFirst('[No] =' + (countindex - indexcount - 1).ToString);
     MessageDBRecSet.Delete;
